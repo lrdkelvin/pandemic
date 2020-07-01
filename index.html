@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pandemic Predictor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" type="width-device-width, initial-scale=1.0">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Permanent+Marker&display=swap"
+    rel="stylesheet">
+  <style>
+    .primary1 {
+      background-color: #003366;
+      font-family: 'Nothing You Could Do', cursive;
+      background-image: url("assets/images/disease.jpg");
+      color: #E30612;
+    }
+
+    ;
+  </style>
+
+
+
+</head>
+
+<body>
+  <header class="display-4 jumbotron jumbotron-fluid primary1 text-center"> Welcome to Pandemic Predictor!</header>
+  <div class="jumbotron jumbotron-fluid">
+
+    <h1 class="display-4 text-center">Updated Daily!</h1>
+
+    <div class="text-center">
+      Press the buttons to see case numbers for the future
+
+    </div>
+
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Region</th>
+          <th scope="col">Cases today</th>
+          <th scope="col">New Cases</th>
+          <th scope="col">Cases Tomorrow</th>
+          <th scope="col">Growth Factor Today</th>
+          <th scope="col">Growth Factor This Week<br>
+          <th scope="col">Growth Factor Last Week</th>
+
+
+          <th scope="col">Deaths</th>
+          <th scope="col">Death Factor Today</th>
+          <th scope="col">New Deaths</th>
+          <th scope="col">Deaths Tomorrow</th>
+          <th scope="col">Death Factor This week</th>
+          <th scope="col">Death Factor Last week</th>
+          <th scope="col">Active cases</th>
+          <th scope="col">Active cases change today</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Globally</th>
+          <td id="gcasestoday"></td>
+          <td id="gcaseschange"></td>
+          <td id="gcasestomorrow"></td>
+          <td id="casesgrowth"></td>
+          <td id="ggrowthratethisweek"></td>
+          <td id="ggrowthratelastweek"></td>
+          <td id="deathstoday"></td>
+          <td id="deathrate"></td>
+          <td id="newdeaths"></td>
+          <td id="deathstomorrow"></td>
+          <td id="gdeathratethisweek"></td>
+          <td id="gdeathratelastweek"></td>
+          <td id="gactivecases"></td>
+          <td id="gactivecaseschange"></td>
+        </tr>
+        <tr>
+          <th scope="row">United States</th>
+          <td id="ustotal"></td>
+          <td id="numbershere"></td>
+          <td id="uscasestomorrow"></td>
+          <td id="usgrowth"></td>
+          <td id="usgrowthratethisweek"></td>
+          <td id="usgrowthratelastweek"></td>
+          <td id="usdeaths"></td>
+          <td id="usdeathrate"></td>
+          <td id="usnewdeaths"></td>
+          <td id="usdeathstomorrow"></td>
+          <td id="usdeathratethisweek"></td>
+          <td id="usdeathratelastweek"></td>
+          <td id="usactivecases"></td>
+          <td id="usactivecaseschange"></td>
+        </tr>
+        <tr>
+          <th scope="row">Utah</th>
+          <td id="utahtotal"></td>
+          <td id="utahnumbershere"></td>
+          <td id="utahcasestomorrow"></td>
+          <td id="utahgrowth"></td>
+          <td id="utahgrowthratethisweek"></td>
+          <td id="utahgrowthratelastweek"></td>
+          <td id="utahdeaths">N/A</td>
+          <td id="utahdeathrate">N/A</td>
+          <td id="utahnewdeaths">N/A</td>
+          <td id="utahdeathstomorrow">N/A</td>
+          <td id="utahdeathratethisweek"></td>
+          <td id="utahdeathratelastweek"></td>
+          <td id="utahactivecases"></td>
+          <td id="utahactivecaseschange"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class = "table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Region</th>
+          <th scope="col">Cases Today</th>
+          <th scope="col">Cases Last Week</th>
+          <th scope="col">Cases Change</th>
+          <th scope="col">Active Cases Today</th>
+          <th scope="col">Active Cases Last Week</th>
+          <th scope="col">Active Cases Change</th>
+
+        </tr>
+      </thead>
+        <tr>
+          <th scope="row">Globally</th>
+          <td id="gcasestoday2"></td>
+          <td id="gcaseslastweek"></td>
+          <td id="gcaseslastweekchange"></td>
+          <td id="gactivecases2"></td>
+          <td id="gactivecaseslastweek"></td>
+          <td id="gactivecaseschange2"></td>
+
+
+
+
+        </tr>
+        <tr>
+          <th scope="row">United States</th>
+          <td id="uscasestoday2"></td>
+          <td id="uscaseslastweek"></td>
+          <td id="uscaseslastweekchange"></td>
+          <td id="usactivecases2"></td>
+          <td id="usactivecaseslastweek"></td>
+          <td id="usactivecaseschange2"></td>
+        </tr>
+        <tr>
+          <th scope="row">Utah</th>
+          <td id="utahcasestoday2"></td>
+          <td id="utahcaseslastweek"></td>
+          <td id="utahcaseslastweekchange"></td>
+          <td id="utahactivecases2"></td>
+          <td id="utahactivecaseslastweek"></td>
+          <td id="utahactivecaseschange2"></td>
+        </tr>
+      <tbody>
+
+      </tbody>
+    </table>
+
+    <canvas id="myChart" class="chart"></canvas>
+    <canvas id="myChart2" class="chart"></canvas>
+    <canvas id="myChart3" class="chart"></canvas>
+    <canvas id="myChart4" class="chart"></canvas>
+    <canvas id="myChart5" class="chart"></canvas>
+    <canvas id="myChart6" class="chart"></canvas>
+    <canvas id="myChart7" class="chart"></canvas>
+
+
+    <h1>FAQ:</h1>
+    <br>
+
+    <h2>What is growth rate?</h2>
+
+    Growth rate is the exponential multiplier for the disease. It is calculated by comparing the value of NEW cases and
+    deaths
+    between today and yesterday. For example, if there were 50 new cases yesterday and 50 new cases today. That day has
+    a growth
+    factor of 1. If there were 50 new cases yesterday and 100 new cases today, there is a growth rate of 2. A consistent
+    growth fact of anything
+    over 1 suggests that more and more people are getting infected, which might suggest exponential growth. If we stay
+    consistenly below 1, the disease
+    is losing and we are winning.<br><br>
+
+    <h2>Why are the growth rates for weeks soo much higher?</h2>
+
+    The time is increased, so the rate increases. If you had 1000 new cases this time last week, and today you have 6000
+    new cases, its a six
+    -fold increase! Going back a couple weeks to calculate growth rates over week long periods takes us back to
+    mid-march, right when
+    mass production of tests was coming out and confirmed cases grew rapidly. Expect these numbers to drop and normalize
+    over time.<br><br>
+
+    <h2>Okay, so why have the weekly growth rate if it's scarier?</h2>
+
+    The point is to show overall trends. You can see that the numbers for this week are so much better than last week.
+    In other words, daily growth rates fluctuate like crazy, so if you can see that thing are improving overall,
+    this suggests we are getting closer to life as usual. Once those weekly numbers dip below 1, I expect restrictions
+    to start being lifted.<br><br>
+
+    <h2>How are predictions calculated?</h2>
+    I wish it was smarter, but I simply apply the days growth rate to the new cases and that gives me a prediction
+    for tomorrow. Unless the prediction is crazy (due to massive daily fluctuations), they provide a small look
+    into the future.<br><br>
+
+
+
+
+
+    <button id="btn-generator">United States</button>
+
+    <ol id="array-here"></ol>
+
+
+    <button id="btn-global">Global</button>
+    <ol id="global-here"></ol>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript" src="assets/javascript/javascript.js"></script>
+</body>
+
+
+</script>
+
+</html>
