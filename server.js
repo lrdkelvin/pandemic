@@ -32,6 +32,12 @@ if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 
+if(process.env.NODE_ENV === 'production') {
+console.log("We are running in production mode")
+} else {
+ // We are running in development mode
+ console.loog("WE are in develpment")
+}
 // Starting the server, syncing our models 
 
   app.listen(PORT, function(
