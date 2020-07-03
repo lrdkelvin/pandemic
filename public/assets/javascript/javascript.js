@@ -10,10 +10,10 @@ var uscasebank = {};
 var usdeathbank = {};
 var utahcasebank = {};
 var utahdeathbank = {};
-var globalstuffs = [580,845,1317,2015,2800,4581,6058,7813,9823,11950,14553,17391,20630,24545,28266,31439,34876,37552,40553,43099,45134,59287,64438,67100,69197,71329,73332,75184,75700,76677,77673,78651,79205,80090,80828,81820,83108,84617,86606,88587,90449,93020,95329,98422,102064,106120,110021,114459,119109,126348,134618,145547,156537,169574,182521,198304,219051,245248,275975,305483,337980,379623,423551,472305,533441,598352,665311,725980,790475,864745,942277,1022840,1107333,1189237,1260225,1333594,1412284,1497242,1582851,1675247,1754959,1826920,1897286,1970784,2053946,2135114,2220493,2301276,2376980,2450762,2526510,2606917,2692112,2794233,2884827,2958447,3028126,3103813,3183986,3270210,3365642,3448804,3531371,3611088,3692835,3789132,3885884,3982725,4072327,4152826,4227763,4313761,4403723,4501230,4601871,4699026,4781680,4872200,4968028,5071527,5179970,5288912,5389421,5486662,5577546,5671251,5778703,5896401,6023228,6148460,6258158,6363649,6479984,6601328,6732687,6864015,6993625,7108496,7216978,7338931,7475719,7614889,7758164,7893237,8017681,8143576,8287495,8433883,8575314,8757523,8915309,9046114,9185835,9349991,9523785,9704528,9899611,10077595,10241922,10403492,10577756];
+var globalstuffs = [580,845,1317,2015,2800,4581,6058,7813,9823,11950,14553,17391,20630,24545,28266,31439,34876,37552,40553,43099,45134,59287,64438,67100,69197,71329,73332,75184,75700,76677,77673,78651,79205,80090,80828,81820,83108,84617,86606,88586,90448,93018,95324,98414,102051,106103,109997,114431,119075,126307,134565,145477,156436,169452,182386,198150,218836,244979,275645,305056,337496,379050,422850,471474,532435,597101,663882,724366,788628,862646,939797,1020000,1104093,1185698,1256165,1329235,1407609,1492067,1577306,1668889,1748144,1819670,1889737,1962851,2045627,2126442,2211408,2291722,2366915,2440403,2515864,2595965,2680854,2782568,2872849,2946140,3015507,3090974,3170856,3256725,3351729,3434652,3516858,3596303,3677766,3773662,3870010,3966625,4055979,4136200,4210866,4296603,4386377,4483688,4584093,4681058,4763635,4854136,4950001,5053546,5161968,5270907,5371408,5468763,5559676,5653567,5761113,5878867,6005803,6131272,6241194,6346922,6463330,6584692,6716115,6847509,6977146,7092055,7200569,7322547,7459456,7598721,7742126,7877382,8001907,8127982,8272113,8418705,8560314,8742806,8900845,9031922,9171998,9336511,9510710,9691806,9887169,10065561,10230211,10392225,10568115,10765557,10974421];
 
 
-var deathsStuffs = [17,25,41,56,80,106,132,170,213,259,304,362,426,492,565,638,724,813,910,1018,1115,1261,1383,1526,1669,1775,1873,2009,2126,2247,2360,2460,2618,2699,2763,2800,2858,2923,2977,3050,3117,3202,3285,3387,3493,3598,3826,4023,4297,4627,4980,5428,5842,6533,7178,7997,8983,10083,11466,13114,14762,16699,19194,21786,24750,28226,31936,35315,39490,44226,49425,55724,61734,67886,72960,78597,86497,93295,100975,108378,114713,120391,126114,133558,141751,148790,157275,163963,168939,174500,181726,188379,195147,201556,207734,211578,216099,222854,229475,235296,240980,246292,249859,253963,259790,266632,272246,277747,282046,286088,289587,295129,300357,305642,310653,315013,318661,322139,326724,331360,336321,340985,345174,348368,351677,355463,360780,365474,370402,374543,377828,380906,385579,390509,396083,400993,405282,408726,411910,416682,421833,426836,431450,435716,439016,442454,449042,454250,459407,464513,468972,472329,476161,481608,486653,491822,496665,501221,504689,508114,513186];
+var deathsStuffs = [17,25,41,56,80,106,132,170,213,259,304,362,426,492,565,638,724,813,910,1018,1115,1261,1383,1526,1669,1775,1873,2009,2126,2247,2360,2460,2618,2699,2763,2800,2858,2923,2977,3050,3117,3202,3285,3387,3493,3598,3826,4023,4297,4627,4980,5428,5842,6533,7178,7997,8983,10083,11466,13114,14762,16699,19193,21785,24750,28226,31936,35315,39490,44226,49425,55724,61734,67886,72960,78597,86497,93295,100975,108378,114713,120391,126114,133558,141751,148790,157275,163963,168939,174500,181726,188379,195147,201556,207734,211578,216099,222854,229475,235296,240980,246292,249859,253963,259790,266632,272246,277747,282046,286088,289587,295129,300357,305642,310653,315013,318661,322139,326724,331360,336321,340985,345174,348368,351677,355463,360780,365474,370402,374543,377828,380906,385579,390509,396083,400993,405282,408726,411910,416682,421833,426836,431451,435717,439018,442458,449047,454256,459415,464529,468992,472353,476188,481645,486701,491876,496719,501280,504754,508187,513251,518087,523242];
 
 
 var uscases = [
@@ -41,7 +41,7 @@ var uscases = [
   0,
   0,
   0,
-  15,15,15,15,15,15,35,35,35,53,57,60,60,63,68,75,100,124,158,221,319,435,541,704,994,1301,1630,2184,2773,3621,4609,6363,9329,13930,19602,24491,33937,44314,55566,69121,86649,105562,125225,145498,168789,194076,221181,251748,284705,319384,345279,377025,411090,443598,477679,511918,542401,570257,597347,624782,655452,685592,718081,747267,773461,801673,827902,858200,890265,929381,964897,991480,1014741,1040309,1068894,1099887,1136041,1165902,1193335,1218089,1242987,1268557,1298192,1327476,1353700,1374513,1393213,1416229,1438610,1466697,1494312,1518636,1538830,1562367,1583159,1605822,1634656,1659312,1681243,1701165,1721075,1740462,1761208,1784283,1809967,1833716,1854459,1876879,1899154,1919975,1942814,1968225,1991076,2009997,2029056,2048128,2069155,2092629,2120018,2145494,2165664,2186553,2212172,2238411,2266359,2299925,2333337,2359439,2390953,2426991,2465403,2505615,2552956,2596537,2637077,2681811,2727853];
+  15,15,15,15,15,15,35,35,35,53,57,60,60,63,68,75,100,124,158,221,319,435,541,704,994,1301,1631,2185,2774,3622,4611,6366,9333,13935,19608,24498,33946,44325,55579,69136,86668,105584,125250,145526,168822,194114,221225,251796,284759,319444,345345,377095,411166,443680,477766,512010,542498,570358,597452,624893,655569,685712,718208,747401,773598,801820,828058,858363,890436,929559,965082,991670,1014937,1040510,1069105,1100105,1136266,1166135,1193573,1218332,1243241,1268819,1298462,1327754,1353989,1374807,1393513,1416537,1438927,1467022,1494646,1518978,1539179,1562722,1583523,1606195,1635039,1659705,1681644,1701574,1721494,1740894,1761648,1784733,1810430,1834193,1854948,1877379,1899666,1920497,1943347,1968774,1991636,2010569,2029638,2048723,2069763,2093253,2120658,2146148,2166329,2187230,2212864,2239121,2267085,2300667,2334098,2360216,2391754,2427820,2466254,2506490,2553855,2597454,2638017,2682781,2728856,2779953,2837189];
 
 var usdeaths = [
   0,
@@ -82,7 +82,7 @@ var usdeaths = [
   0,
   0,
   0,
-  1,1,6,9,11,12,15,19,22,26,30,38,41,48,58,73,95,121,171,240,310,376,512,693,963,1270,1628,2129,2779,3280,4102,5201,6460,7671,8953,10530,11953,13476,15743,17953,20099,22379,24445,26201,27947,30573,33263,35517,38113,40034,41628,43609,46358,48767,51169,53161,55271,56441,57844,60381,62823,65097,67044,68774,69949,71287,73691,76265,78438,80151,81602,82817,83892,85804,87661,89452,91089,92328,93210,94228,95810,97242,98674,99996,101049,101675,102311,103094,104657,105896,107130,108163,108814,109509,110656,111760,112810,113798,114515,114899,115497,116602,117600,118518,119318,120034,120370,120802,121661,122480,123238,123967,124549,124820,125189,126060,126879,127532,128195,128707,128992,129358,130122];
+  1,1,6,9,11,12,15,19,22,26,30,38,41,48,58,73,95,121,171,240,310,376,512,693,962,1269,1628,2129,2779,3280,4102,5201,6460,7671,8953,10530,11953,13476,15743,17953,20099,22379,24445,26201,27947,30573,33263,35517,38113,40034,41628,43609,46358,48767,51169,53161,55271,56441,57844,60381,62823,65097,67044,68774,69949,71287,73691,76265,78438,80151,81602,82817,83892,85804,87661,89452,91089,92328,93210,94228,95810,97242,98674,99996,101049,101675,102311,103094,104657,105896,107130,108163,108814,109509,110656,111760,112810,113798,114515,114899,115497,116602,117600,118518,119318,120034,120370,120802,121661,122480,123238,123967,124549,124820,125189,126060,126879,127532,128195,128707,128992,129358,130122,130798,131485] ;
 
 var utahcases = [
   0,
@@ -134,119 +134,9 @@ var utahcases = [
   0,
   0,
   0,
-  1,
-  2,
-  3,
-  4,
-  9,
-  14,
-  26,
-  38,
-  52,
-  61,
-  94,
-  120,
-  141,
-  223,
-  255,
-  323,
-  363,
-  450,
-  573,
-  688,
-  788,
-  902,
-  984,
-  1065,
-  1268,
-  1423,
-  1593,
-  1666,
-  1732,
-  1817,
-  1967,
-  2092,
-  2213,
-  2312,
-  2371,
-  2418,
-  2540,
-  2676,
-  2807,
-  2943,
-  3076,
-  3225,
-  3312,
-  3453,
-  3614,
-  3770,
-  3950,
-  4132,
-  4240,
-  4335,
-  4482,
-  4659,
-  4815,
-  4971,
-  5159,
-  5295,
-  5421,
-  5578,
-  5704,
-  5899,
-  6084,
-  6232,
-  6232,
-  6348,
-  6421,
-  6604,
-  6732,
-  6895,
-  7049,
-  7218,
-  7366,
-  7503,
-  7701,
-  7862,
-  8056,
-  8238,
-  8378,
-  8509,
-  8603,
-  8687,
-  8923,
-  9256,
-  9802,
-  10009,
-  10210,
-  10491,
-  10802,
-  11256,
-  12091,
-  12374,
-  12569,
-  12880,
-  13252,
-  13587,
-  13987,
-  14329,
-  14630,
-  14950,
-  15369,
-  15855,
-  16447,
-  17087,
-  17497,
-  17946,
-  18311,
-  18792,
-  19374,
-  20050,
-  20620,
-  21114,
-  21699,
-  22217
-];
+  1, //march 11
+  5,9,10,28,39,51,63,80,112,136,181,257,298,346,402,480,602,719,806,887,1012,1074,1246,1428,1605,1675,1738,1846,1976,2102,2206,2303,2363,2412,2542,2683,2805,2931,3069,3213,3296,3445,3612,3782,3948,4123,4233,4343,4495,4672,4828,4981,5175,5317,5449,5595,5724,5919,6103,6251,6362,6432,6620,6749,6913,7068,7238,7384,7518,7710,7874,8057,8260,8392,8521,8620,8706,8921,9264,9533,9797,9999,10202,10497,10813,11252,11798,12066,12322,12559,12864,13252,13577,13981,14313,14608,14937,15344,15839,16425,17068,17462,17906,18300,18784,19374,20050,20628,21100,21664,22217,22716,23270];
+
 
 var utahdeaths = [
   0,
@@ -309,108 +199,8 @@ var utahdeaths = [
   0,
   0,
   0,
-  0,
-  0,
-  0,
-  0,
-  1,
-  1,
-  1,
-  1,
-  3,
-  4,
-  5,
-  7,
-  7,
-  9,
-  9,
-  10,
-  10,
-  15,
-  15,
-  15,
-  16,
-  17,
-  19,
-  22,
-  22,
-  22,
-  22,
-  23,
-  24,
-  25,
-  26,
-  29,
-  30,
-  35,
-  35,
-  37,
-  43,
-  43,
-  45,
-  46,
-  47,
-  47,
-  47,
-  50,
-  53,
-  56,
-  57,
-  58,
-  61,
-  64,
-  66,
-  70,
-  73,
-  75,
-  77,
-  78,
-  82,
-  85,
-  89,
-  91,
-  93,
-  96,
-  98,
-  101,
-  103,
-  105,
-  107,
-  109,
-  110,
-  110,
-  114,
-  116,
-  117,
-  120,
-  120,
-  122,
-  124,
-  124,
-  127,
-  130,
-  130,
-  135,
-  139,
-  140,
-  145,
-  146,
-  148,
-  149,
-  150,
-  154,
-  156,
-  158,
-  160,
-  161,
-  163,
-  164,
-  166,
-  170,
-  172,
-  172,
-  172
-];
+  1,1,1,1,1,2,2,2,4,5,7,7,7,8,8,13,13,13,13,17,18,18,18,19,20,21,23,25,27,28,32,34,35,39,41,41,41,45,45,46,46,49,50,50,56,58,61,61,66,67,68,73,75,75,77,78,80,80,88,90,92,93,97,97,98,101,105,106,107,112,113,113,113,117,117,120,121,121,124,127,128,131,139,139,139,143,145,149,152,155,155,158,158,163,163,164,166,167,167,168,172,173,176];
+
 
 
 utahcountycasebank = {
@@ -419,7 +209,7 @@ utahcountycasebank = {
 };
 
 function createObjects() {
-  for (var i = 0; i < globalstuffs.length; i++) {
+  for (var i = 0; i < 163; i++) {
     if (i < 10) {
       var date = "jan" + (22 + i);
       dates.push(date);
@@ -450,22 +240,28 @@ function createObjects() {
     } else if (i < 140) {
       var date = "jun0" + (i - 130);
       dates.push(date);
-    } else if (i < 171) {
+    } else if (i < 161) {
       var date = "jun" + (i - 130);
+      dates.push(date);
+    }  else if (i < 170) {
+      var date = "jul0" + (i - 160);
+      dates.push(date);
+    }  else if (i < 192) {
+      var date = "jul" + (i - 160);
       dates.push(date);
     }
   }
 }
+
+
 createObjects();
-console.log(dates);
 dates.forEach((key, idx) => (globalcasebank[key] = globalstuffs[idx]));
 dates.forEach((key, idx) => (globaldeathbank[key] = deathsStuffs[idx]));
 dates.forEach((key, idx) => (uscasebank[key] = uscases[idx]));
 dates.forEach((key, idx) => (usdeathbank[key] = usdeaths[idx]));
 dates.forEach((key, idx) => (utahcasebank[key] = utahcases[idx]));
 dates.forEach((key, idx) => (utahdeathbank[key] = utahdeaths[idx]));
-console.log(utahdeathbank);
-console.log(utahcasebank);
+
 
 var globalcaseprediction = 3308945;
 var uscasesprediction = 1096002;
@@ -574,6 +370,37 @@ var grecovered = {
   jun28: globalcasebank.jun14 - globaldeathbank.jun28,
   jun29: globalcasebank.jun15 - globaldeathbank.jun29,
   jun30: globalcasebank.jun16 - globaldeathbank.jun30,
+  jul01: globalcasebank.jun17 - globaldeathbank.jul01,
+  jul02: globalcasebank.jun18 - globaldeathbank.jul02,
+  jul03: globalcasebank.jun19 - globaldeathbank.jul03,
+  jul04: globalcasebank.jun20 - globaldeathbank.jul04,
+  jul05: globalcasebank.jun21 - globaldeathbank.jul05,
+  jul06: globalcasebank.jun22 - globaldeathbank.jul06,
+  jul07: globalcasebank.jun23 - globaldeathbank.jul07,
+  jul08: globalcasebank.jun24 - globaldeathbank.jul08,
+  jul09: globalcasebank.jun25 - globaldeathbank.jul09,
+  jul10: globalcasebank.jun26 - globaldeathbank.jul10,
+  jul11: globalcasebank.jun27 - globaldeathbank.jul11,
+  jul12: globalcasebank.jun28 - globaldeathbank.jul12,
+  jul13: globalcasebank.jun29 - globaldeathbank.jul13,
+  jul14: globalcasebank.jun30 - globaldeathbank.jul14,
+  jul15: globalcasebank.jul01 - globaldeathbank.jul15,
+  jul16: globalcasebank.jul02 - globaldeathbank.jul16,
+  jul17: globalcasebank.jul03 - globaldeathbank.jul17,
+  jul18: globalcasebank.jul04 - globaldeathbank.jul18,
+  jul19: globalcasebank.jul05 - globaldeathbank.jul19,
+  jul20: globalcasebank.jul06 - globaldeathbank.jul20,
+  jul21: globalcasebank.jul07 - globaldeathbank.jul21,
+  jul22: globalcasebank.jul08 - globaldeathbank.jul22,
+  jul23: globalcasebank.jul09 - globaldeathbank.jul23,
+  jul24: globalcasebank.jul10 - globaldeathbank.jul24,
+  jul25: globalcasebank.jul11 - globaldeathbank.jul25,
+  jul26: globalcasebank.jul12 - globaldeathbank.jul26,
+  jul27: globalcasebank.jul13 - globaldeathbank.jul27,
+  jul28: globalcasebank.jul14 - globaldeathbank.jul28,
+  jul29: globalcasebank.jul15 - globaldeathbank.jul29,
+  jul30: globalcasebank.jul16 - globaldeathbank.jul30,
+  jul31: globalcasebank.jul17 - globaldeathbank.jul31,
 };
 
 var gactivecases = {
@@ -675,6 +502,37 @@ var gactivecases = {
   jun28: globalcasebank.jun28 - (globaldeathbank.jun28 + grecovered.jun28),
   jun29: globalcasebank.jun29 - (globaldeathbank.jun29 + grecovered.jun29),
   jun30: globalcasebank.jun30 - (globaldeathbank.jun30 + grecovered.jun30),
+  jul01: globalcasebank.jul01 - (globaldeathbank.jul01 + grecovered.jul01),
+  jul02: globalcasebank.jul02 - (globaldeathbank.jul02 + grecovered.jul02),
+  jul03: globalcasebank.jul03 - (globaldeathbank.jul03 + grecovered.jul03),
+  jul04: globalcasebank.jul04 - (globaldeathbank.jul04 + grecovered.jul04),
+  jul05: globalcasebank.jul05 - (globaldeathbank.jul05 + grecovered.jul05),
+  jul06: globalcasebank.jul06 - (globaldeathbank.jul06 + grecovered.jul06),
+  jul07: globalcasebank.jul07 - (globaldeathbank.jul07 + grecovered.jul07),
+  jul08: globalcasebank.jul08 - (globaldeathbank.jul08 + grecovered.jul08),
+  jul09: globalcasebank.jul09 - (globaldeathbank.jul09 + grecovered.jul09),
+  jul10: globalcasebank.jul10 - (globaldeathbank.jul10 + grecovered.jul10),
+  jul11: globalcasebank.jul11 - (globaldeathbank.jul11 + grecovered.jul11),
+  jul12: globalcasebank.jul12 - (globaldeathbank.jul12 + grecovered.jul12),
+  jul13: globalcasebank.jul13 - (globaldeathbank.jul13 + grecovered.jul13),
+  jul14: globalcasebank.jul14 - (globaldeathbank.jul14 + grecovered.jul14),
+  jul15: globalcasebank.jul15 - (globaldeathbank.jul15 + grecovered.jul15),
+  jul16: globalcasebank.jul16 - (globaldeathbank.jul16 + grecovered.jul16),
+  jul17: globalcasebank.jul17 - (globaldeathbank.jul17 + grecovered.jul17),
+  jul18: globalcasebank.jul18 - (globaldeathbank.jul18 + grecovered.jul18),
+  jul19: globalcasebank.jul19 - (globaldeathbank.jul19 + grecovered.jul19),
+  jul20: globalcasebank.jul20 - (globaldeathbank.jul20 + grecovered.jul20),
+  jul21: globalcasebank.jul21 - (globaldeathbank.jul21 + grecovered.jul21),
+  jul22: globalcasebank.jul22 - (globaldeathbank.jul22 + grecovered.jul22),
+  jul23: globalcasebank.jul23 - (globaldeathbank.jul23 + grecovered.jul23),
+  jul24: globalcasebank.jul24 - (globaldeathbank.jul24 + grecovered.jul24),
+  jul25: globalcasebank.jul25 - (globaldeathbank.jul25 + grecovered.jul25),
+  jul26: globalcasebank.jul26 - (globaldeathbank.jul26 + grecovered.jul26),
+  jul27: globalcasebank.jul27 - (globaldeathbank.jul27 + grecovered.jul27),
+  jul28: globalcasebank.jul28 - (globaldeathbank.jul28 + grecovered.jul28),
+  jul29: globalcasebank.jul29 - (globaldeathbank.jul29 + grecovered.jul29),
+  jul30: globalcasebank.jul30 - (globaldeathbank.jul30 + grecovered.jul30),
+  jul31: globalcasebank.jul31 - (globaldeathbank.jul31 + grecovered.jul31),
 };
 
 var usrecovered = {
@@ -776,6 +634,37 @@ var usrecovered = {
   jun28: uscasebank.jun14 - usdeathbank.jun28,
   jun29: uscasebank.jun15 - usdeathbank.jun29,
   jun30: uscasebank.jun16 - usdeathbank.jun30,
+  jul01: uscasebank.jun17 - usdeathbank.jul01,
+  jul02: uscasebank.jun18 - usdeathbank.jul02,
+  jul03: uscasebank.jun19 - usdeathbank.jul03,
+  jul04: uscasebank.jun20 - usdeathbank.jul04,
+  jul05: uscasebank.jun21 - usdeathbank.jul05,
+  jul06: uscasebank.jun22 - usdeathbank.jul06,
+  jul07: uscasebank.jun23 - usdeathbank.jul07,
+  jul08: uscasebank.jun24 - usdeathbank.jul08,
+  jul09: uscasebank.jun25 - usdeathbank.jul09,
+  jul10: uscasebank.jun26 - usdeathbank.jul10,
+  jul11: uscasebank.jun27 - usdeathbank.jul11,
+  jul12: uscasebank.jun28 - usdeathbank.jul12,
+  jul13: uscasebank.jun29 - usdeathbank.jul13,
+  jul14: uscasebank.jun30 - usdeathbank.jul14,
+  jul15: uscasebank.jul01 - usdeathbank.jul15,
+  jul16: uscasebank.jul02 - usdeathbank.jul16,
+  jul17: uscasebank.jul03 - usdeathbank.jul17,
+  jul18: uscasebank.jul04 - usdeathbank.jul18,
+  jul19: uscasebank.jul05 - usdeathbank.jul19,
+  jul20: uscasebank.jul06 - usdeathbank.jul20,
+  jul21: uscasebank.jul07 - usdeathbank.jul21,
+  jul22: uscasebank.jul08 - usdeathbank.jul22,
+  jul23: uscasebank.jul09 - usdeathbank.jul23,
+  jul24: uscasebank.jul10 - usdeathbank.jul24,
+  jul25: uscasebank.jul11 - usdeathbank.jul25,
+  jul26: uscasebank.jul12 - usdeathbank.jul26,
+  jul27: uscasebank.jul13 - usdeathbank.jul27,
+  jul28: uscasebank.jul14 - usdeathbank.jul28,
+  jul29: uscasebank.jul15 - usdeathbank.jul29,
+  jul30: uscasebank.jul16 - usdeathbank.jul30,
+  jul31: uscasebank.jul17 - usdeathbank.jul31,
 };
 
 var usactivecases = {
@@ -877,10 +766,39 @@ var usactivecases = {
   jun28: uscasebank.jun28 - (usdeathbank.jun28 + usrecovered.jun28),
   jun29: uscasebank.jun29 - (usdeathbank.jun29 + usrecovered.jun29),
   jun30: uscasebank.jun30 - (usdeathbank.jun30 + usrecovered.jun30),
+  jul01: uscasebank.jul01 - (usdeathbank.jul01 + usrecovered.jul01),
+  jul02: uscasebank.jul02 - (usdeathbank.jul02 + usrecovered.jul02),
+  jul03: uscasebank.jul03 - (usdeathbank.jul03 + usrecovered.jul03),
+  jul04: uscasebank.jul04 - (usdeathbank.jul04 + usrecovered.jul04),
+  jul05: uscasebank.jul05 - (usdeathbank.jul05 + usrecovered.jul05),
+  jul06: uscasebank.jul06 - (usdeathbank.jul06 + usrecovered.jul06),
+  jul07: uscasebank.jul07 - (usdeathbank.jul07 + usrecovered.jul07),
+  jul08: uscasebank.jul08 - (usdeathbank.jul08 + usrecovered.jul08),
+  jul09: uscasebank.jul09 - (usdeathbank.jul09 + usrecovered.jul09),
+  jul10: uscasebank.jul10 - (usdeathbank.jul10 + usrecovered.jul10),
+  jul11: uscasebank.jul11 - (usdeathbank.jul11 + usrecovered.jul11),
+  jul12: uscasebank.jul12 - (usdeathbank.jul12 + usrecovered.jul12),
+  jul13: uscasebank.jul13 - (usdeathbank.jul13 + usrecovered.jul13),
+  jul14: uscasebank.jul14 - (usdeathbank.jul14 + usrecovered.jul14),
+  jul15: uscasebank.jul15 - (usdeathbank.jul15 + usrecovered.jul15),
+  jul16: uscasebank.jul16 - (usdeathbank.jul16 + usrecovered.jul16),
+  jul17: uscasebank.jul17 - (usdeathbank.jul17 + usrecovered.jul17),
+  jul18: uscasebank.jul18 - (usdeathbank.jul18 + usrecovered.jul18),
+  jul19: uscasebank.jul19 - (usdeathbank.jul19 + usrecovered.jul19),
+  jul20: uscasebank.jul20 - (usdeathbank.jul20 + usrecovered.jul20),
+  jul21: uscasebank.jul21 - (usdeathbank.jul21 + usrecovered.jul21),
+  jul22: uscasebank.jul22 - (usdeathbank.jul22 + usrecovered.jul22),
+  jul23: uscasebank.jul23 - (usdeathbank.jul23 + usrecovered.jul23),
+  jul24: uscasebank.jul24 - (usdeathbank.jul24 + usrecovered.jul24),
+  jul25: uscasebank.jul25 - (usdeathbank.jul25 + usrecovered.jul25),
+  jul26: uscasebank.jul26 - (usdeathbank.jul26 + usrecovered.jul26),
+  jul27: uscasebank.jul27 - (usdeathbank.jul27 + usrecovered.jul27),
+  jul28: uscasebank.jul28 - (usdeathbank.jul28 + usrecovered.jul28),
+  jul29: uscasebank.jul29 - (usdeathbank.jul29 + usrecovered.jul29),
+  jul30: uscasebank.jul30 - (usdeathbank.jul30 + usrecovered.jul30),
+  jul31: uscasebank.jul31 - (usdeathbank.jul31 + usrecovered.jul31),
 };
-console.log(uscasebank.mar14);
-console.log(usdeathbank.mar28);
-console.log("us recovered is " + usrecovered.mar28)
+
 var utahrecovered = {
   mar25: utahcasebank.mar11 - utahdeathbank.mar25,
   mar26: utahcasebank.mar12 - utahdeathbank.mar26,
@@ -980,6 +898,37 @@ var utahrecovered = {
   jun28: utahcasebank.jun14 - utahdeathbank.jun28,
   jun29: utahcasebank.jun15 - utahdeathbank.jun29,
   jun30: utahcasebank.jun16 - utahdeathbank.jun30,
+  jul01: utahcasebank.jun17 - utahdeathbank.jul01,
+  jul02: utahcasebank.jun18 - utahdeathbank.jul02,
+  jul03: utahcasebank.jun19 - utahdeathbank.jul03,
+  jul04: utahcasebank.jun20 - utahdeathbank.jul04,
+  jul05: utahcasebank.jun21 - utahdeathbank.jul05,
+  jul06: utahcasebank.jun22 - utahdeathbank.jul06,
+  jul07: utahcasebank.jun23 - utahdeathbank.jul07,
+  jul08: utahcasebank.jun24 - utahdeathbank.jul08,
+  jul09: utahcasebank.jun25 - utahdeathbank.jul09,
+  jul10: utahcasebank.jun26 - utahdeathbank.jul10,
+  jul11: utahcasebank.jun27 - utahdeathbank.jul11,
+  jul12: utahcasebank.jun28 - utahdeathbank.jul12,
+  jul13: utahcasebank.jun29 - utahdeathbank.jul13,
+  jul14: utahcasebank.jun30 - utahdeathbank.jul14,
+  jul15: utahcasebank.jul01 - utahdeathbank.jul15,
+  jul16: utahcasebank.jul02 - utahdeathbank.jul16,
+  jul17: utahcasebank.jul03 - utahdeathbank.jul17,
+  jul18: utahcasebank.jul04 - utahdeathbank.jul18,
+  jul19: utahcasebank.jul05 - utahdeathbank.jul19,
+  jul20: utahcasebank.jul06 - utahdeathbank.jul20,
+  jul21: utahcasebank.jul07 - utahdeathbank.jul21,
+  jul22: utahcasebank.jul08 - utahdeathbank.jul22,
+  jul23: utahcasebank.jul09 - utahdeathbank.jul23,
+  jul24: utahcasebank.jul10 - utahdeathbank.jul24,
+  jul25: utahcasebank.jul11 - utahdeathbank.jul25,
+  jul26: utahcasebank.jul12 - utahdeathbank.jul26,
+  jul27: utahcasebank.jul13 - utahdeathbank.jul27,
+  jul28: utahcasebank.jul14 - utahdeathbank.jul28,
+  jul29: utahcasebank.jul15 - utahdeathbank.jul29,
+  jul30: utahcasebank.jul16 - utahdeathbank.jul30,
+  jul31: utahcasebank.jul17 - utahdeathbank.jul31,
 };
 
 var utahactivecases = {
@@ -1081,6 +1030,37 @@ var utahactivecases = {
   jun28: utahcasebank.jun28 - (utahdeathbank.jun28 + utahrecovered.jun28),
   jun29: utahcasebank.jun29 - (utahdeathbank.jun29 + utahrecovered.jun29),
   jun30: utahcasebank.jun30 - (utahdeathbank.jun30 + utahrecovered.jun30),
+  jul01: utahcasebank.jul01 - (utahdeathbank.jul01 + utahrecovered.jul01),
+  jul02: utahcasebank.jul02 - (utahdeathbank.jul02 + utahrecovered.jul02),
+  jul03: utahcasebank.jul03 - (utahdeathbank.jul03 + utahrecovered.jul03),
+  jul04: utahcasebank.jul04 - (utahdeathbank.jul04 + utahrecovered.jul04),
+  jul05: utahcasebank.jul05 - (utahdeathbank.jul05 + utahrecovered.jul05),
+  jul06: utahcasebank.jul06 - (utahdeathbank.jul06 + utahrecovered.jul06),
+  jul07: utahcasebank.jul07 - (utahdeathbank.jul07 + utahrecovered.jul07),
+  jul08: utahcasebank.jul08 - (utahdeathbank.jul08 + utahrecovered.jul08),
+  jul09: utahcasebank.jul09 - (utahdeathbank.jul09 + utahrecovered.jul09),
+  jul10: utahcasebank.jul10 - (utahdeathbank.jul10 + utahrecovered.jul10),
+  jul11: utahcasebank.jul11 - (utahdeathbank.jul11 + utahrecovered.jul11),
+  jul12: utahcasebank.jul12 - (utahdeathbank.jul12 + utahrecovered.jul12),
+  jul13: utahcasebank.jul13 - (utahdeathbank.jul13 + utahrecovered.jul13),
+  jul14: utahcasebank.jul14 - (utahdeathbank.jul14 + utahrecovered.jul14),
+  jul15: utahcasebank.jul15 - (utahdeathbank.jul15 + utahrecovered.jul15),
+  jul16: utahcasebank.jul16 - (utahdeathbank.jul16 + utahrecovered.jul16),
+  jul17: utahcasebank.jul17 - (utahdeathbank.jul17 + utahrecovered.jul17),
+  jul18: utahcasebank.jul18 - (utahdeathbank.jul18 + utahrecovered.jul18),
+  jul19: utahcasebank.jul19 - (utahdeathbank.jul19 + utahrecovered.jul19),
+  jul20: utahcasebank.jul20 - (utahdeathbank.jul20 + utahrecovered.jul20),
+  jul21: utahcasebank.jul21 - (utahdeathbank.jul21 + utahrecovered.jul21),
+  jul22: utahcasebank.jul22 - (utahdeathbank.jul22 + utahrecovered.jul22),
+  jul23: utahcasebank.jul23 - (utahdeathbank.jul23 + utahrecovered.jul23),
+  jul24: utahcasebank.jul24 - (utahdeathbank.jul24 + utahrecovered.jul24),
+  jul25: utahcasebank.jul25 - (utahdeathbank.jul25 + utahrecovered.jul25),
+  jul26: utahcasebank.jul26 - (utahdeathbank.jul26 + utahrecovered.jul26),
+  jul27: utahcasebank.jul27 - (utahdeathbank.jul27 + utahrecovered.jul27),
+  jul28: utahcasebank.jul28 - (utahdeathbank.jul28 + utahrecovered.jul28),
+  jul29: utahcasebank.jul29 - (utahdeathbank.jul29 + utahrecovered.jul29),
+  jul30: utahcasebank.jul30 - (utahdeathbank.jul30 + utahrecovered.jul30),
+  jul31: utahcasebank.jul31 - (utahdeathbank.jul31 + utahrecovered.jul31),
 };
 
 var utahcountyrecovered = {
@@ -1223,56 +1203,56 @@ var utahcountyactivecases = {
   may30: utahcountycasebank.may30 - utahcountyrecovered.may30,
 };
 
-          var twodaysago = uscasebank.jun28;
-var twodaysagoglobal = globalcasebank.jun28;
-      var deathstwo = globaldeathbank.jun28;
-        var usdeathstwo = usdeathbank.jun28;
-    var utahdeathstwo = utahdeathbank.jun28;
-    var utahtwodaysago = utahcasebank.jun28;
+          var twodaysago = uscasebank.jun30;
+var twodaysagoglobal = globalcasebank.jun30;
+      var deathstwo = globaldeathbank.jun30;
+        var usdeathstwo = usdeathbank.jun30;
+    var utahdeathstwo = utahdeathbank.jun30;
+    var utahtwodaysago = utahcasebank.jun30;
 
-              var utahyesterday = utahcasebank.jun29;
-       var utahdeathsyesterday = utahdeathbank.jun29;
-           var usdeathsyesterday = usdeathbank.jun29;
-         var deathsyesterday = globaldeathbank.jun29;
-           var yesterdaytotal = globalcasebank.jun29;
-                    var yesterday = uscasebank.jun29;
-      var gactivecasesyesterday = gactivecases.jun29;
-    var usactivecasesyesterday = usactivecases.jun29;
-var utahactivecasesyesterday = utahactivecases.jun29;
+              var utahyesterday = utahcasebank.jul01;
+       var utahdeathsyesterday = utahdeathbank.jul01;
+           var usdeathsyesterday = usdeathbank.jul01;
+         var deathsyesterday = globaldeathbank.jul01;
+           var yesterdaytotal = globalcasebank.jul01;
+                    var yesterday = uscasebank.jul01;
+      var gactivecasesyesterday = gactivecases.jul01;
+    var usactivecasesyesterday = usactivecases.jul01;
+var utahactivecasesyesterday = utahactivecases.jul01;
 
-       var utahdeathstoday = utahdeathbank.jun30;
-              var utahtoday = utahcasebank.jun30;
-           var usdeathstoday = usdeathbank.jun30;
-         var deathstoday = globaldeathbank.jun30;
-           var todaytotal = globalcasebank.jun30;
-                    var today = uscasebank.jun30;
-var utahactivecasestoday = utahactivecases.jun30;
-    var usactivecasestoday = usactivecases.jun30;
-      var gactivecasestoday = gactivecases.jun30;
+       var utahdeathstoday = utahdeathbank.jul02;
+              var utahtoday = utahcasebank.jul02;
+           var usdeathstoday = usdeathbank.jul02;
+         var deathstoday = globaldeathbank.jul02;
+           var todaytotal = globalcasebank.jul02;
+                    var today = uscasebank.jul02;
+var utahactivecasestoday = utahactivecases.jul02;
+    var usactivecasestoday = usactivecases.jul02;
+      var gactivecasestoday = gactivecases.jul02;
 
-        var gcasesoneweekago = globalcasebank.jun23;
-     var utahdeathsoneweekago = utahdeathbank.jun23;
-           var uscasesoneweekago = uscasebank.jun23;
-       var utahcasesoneweekago = utahcasebank.jun23;
-      var gdeathsoneweekago = globaldeathbank.jun23;
-         var usdeathsoneweekago = usdeathbank.jun23;
-var utahactivecaseslastweek = utahactivecases.jun23;
-    var usactivecaseslastweek = usactivecases.jun23;
-      var gactivecaseslastweek = gactivecases.jun23;
+        var gcasesoneweekago = globalcasebank.jun25;
+     var utahdeathsoneweekago = utahdeathbank.jun25;
+           var uscasesoneweekago = uscasebank.jun25;
+       var utahcasesoneweekago = utahcasebank.jun25;
+      var gdeathsoneweekago = globaldeathbank.jun25;
+         var usdeathsoneweekago = usdeathbank.jun25;
+var utahactivecaseslastweek = utahactivecases.jun25;
+    var usactivecaseslastweek = usactivecases.jun25;
+      var gactivecaseslastweek = gactivecases.jun25;
 
-   var gcasestwoweeksago = globalcasebank.jun16;
-    var usdeathstwoweeksago = usdeathbank.jun16;
-  var utahcasestwoweeksago = utahcasebank.jun16;
- var gdeathstwoweeksago = globaldeathbank.jun16;
-      var uscasestwoweeksago = uscasebank.jun16;
-var utahdeathstwoweeksago = utahdeathbank.jun16;
+   var gcasestwoweeksago = globalcasebank.jun18;
+    var usdeathstwoweeksago = usdeathbank.jun18;
+  var utahcasestwoweeksago = utahcasebank.jun18;
+ var gdeathstwoweeksago = globaldeathbank.jun18;
+      var uscasestwoweeksago = uscasebank.jun18;
+var utahdeathstwoweeksago = utahdeathbank.jun18;
 
-      var uscasesthreeweeksago = uscasebank.jun09;
-  var gdeathsthreeweekago = globaldeathbank.jun09;
-  var utahcasesthreeweeksago = utahcasebank.jun09;
-    var usdeathsthreeweeksago = usdeathbank.jun09;
-var utahdeathsthreeweeksago = utahdeathbank.jun09;
-   var gcasesthreeweeksago = globalcasebank.jun09;
+      var uscasesthreeweeksago = uscasebank.jun11;
+  var gdeathsthreeweekago = globaldeathbank.jun11;
+  var utahcasesthreeweeksago = utahcasebank.jun11;
+    var usdeathsthreeweeksago = usdeathbank.jun11;
+var utahdeathsthreeweeksago = utahdeathbank.jun11;
+   var gcasesthreeweeksago = globalcasebank.jun11;
 
 var glastweekchange = todaytotal - gcasesoneweekago;
 var uslastweekchange = today - uscasesoneweekago;
@@ -1384,6 +1364,8 @@ var stackedLine = new Chart(ctx, {
       "June 28",
       "June 29",
       "June 30",
+      "July 1",
+      "July 2",
     ],
     datasets: [
       {
@@ -1492,6 +1474,37 @@ var stackedLine = new Chart(ctx, {
           globaldeathbank.jun28,
           globaldeathbank.jun29,
           globaldeathbank.jun30,
+          globaldeathbank.jul01,
+          globaldeathbank.jul02,
+          globaldeathbank.jul03,
+          globaldeathbank.jul04,
+          globaldeathbank.jul05,
+          globaldeathbank.jul06,
+          globaldeathbank.jul07,
+          globaldeathbank.jul08,
+          globaldeathbank.jul09,
+          globaldeathbank.jul10,
+          globaldeathbank.jul11,
+          globaldeathbank.jul12,
+          globaldeathbank.jul13,
+          globaldeathbank.jul14,
+          globaldeathbank.jul15,
+          globaldeathbank.jul16,
+          globaldeathbank.jul17,
+          globaldeathbank.jul18,
+          globaldeathbank.jul19,
+          globaldeathbank.jul20,
+          globaldeathbank.jul21,
+          globaldeathbank.jul22,
+          globaldeathbank.jul23,
+          globaldeathbank.jul24,
+          globaldeathbank.jul25,
+          globaldeathbank.jul26,
+          globaldeathbank.jul27,
+          globaldeathbank.jul28,
+          globaldeathbank.jul29,
+          globaldeathbank.jul30,
+          globaldeathbank.jul31,
         ],
       },
     ],
@@ -1615,6 +1628,8 @@ var newchart = new Chart(ctx2, {
       "June 28",
       "June 29",
       "June 30",
+      "July 1",
+      "July 2",
     ],
     datasets: [
       {
@@ -1722,6 +1737,37 @@ var newchart = new Chart(ctx2, {
           globaldeathbank.jun28,
           globaldeathbank.jun29,
           globaldeathbank.jun30,
+          globaldeathbank.jul01,
+          globaldeathbank.jul02,
+          globaldeathbank.jul03,
+          globaldeathbank.jul04,
+          globaldeathbank.jul05,
+          globaldeathbank.jul06,
+          globaldeathbank.jul07,
+          globaldeathbank.jul08,
+          globaldeathbank.jul09,
+          globaldeathbank.jul10,
+          globaldeathbank.jul11,
+          globaldeathbank.jul12,
+          globaldeathbank.jul13,
+          globaldeathbank.jul14,
+          globaldeathbank.jul15,
+          globaldeathbank.jul16,
+          globaldeathbank.jul17,
+          globaldeathbank.jul18,
+          globaldeathbank.jul19,
+          globaldeathbank.jul20,
+          globaldeathbank.jul21,
+          globaldeathbank.jul22,
+          globaldeathbank.jul23,
+          globaldeathbank.jul24,
+          globaldeathbank.jul25,
+          globaldeathbank.jul26,
+          globaldeathbank.jul27,
+          globaldeathbank.jul28,
+          globaldeathbank.jul29,
+          globaldeathbank.jul30,
+          globaldeathbank.jul31,
         ],
       },
 
@@ -1830,6 +1876,37 @@ var newchart = new Chart(ctx2, {
           gactivecases.jun28,
           gactivecases.jun29,
           gactivecases.jun30,
+          gactivecases.jul01,
+          gactivecases.jul02,
+          gactivecases.jul03,
+          gactivecases.jul04,
+          gactivecases.jul05,
+          gactivecases.jul06,
+          gactivecases.jul07,
+          gactivecases.jul08,
+          gactivecases.jul09,
+          gactivecases.jul10,
+          gactivecases.jul11,
+          gactivecases.jul12,
+          gactivecases.jul13,
+          gactivecases.jul14,
+          gactivecases.jul15,
+          gactivecases.jul16,
+          gactivecases.jul17,
+          gactivecases.jul18,
+          gactivecases.jul19,
+          gactivecases.jul20,
+          gactivecases.jul21,
+          gactivecases.jul22,
+          gactivecases.jul23,
+          gactivecases.jul24,
+          gactivecases.jul25,
+          gactivecases.jul26,
+          gactivecases.jul27,
+          gactivecases.jul28,
+          gactivecases.jul29,
+          gactivecases.jul30,
+          gactivecases.jul31,
         ],
       },
 
@@ -1939,6 +2016,37 @@ var newchart = new Chart(ctx2, {
           grecovered.jun28,
           grecovered.jun29,
           grecovered.jun30,
+          grecovered.jul01,
+          grecovered.jul02,
+          grecovered.jul03,
+          grecovered.jul04,
+          grecovered.jul05,
+          grecovered.jul06,
+          grecovered.jul07,
+          grecovered.jul08,
+          grecovered.jul09,
+          grecovered.jul10,
+          grecovered.jul11,
+          grecovered.jul12,
+          grecovered.jul13,
+          grecovered.jul14,
+          grecovered.jul15,
+          grecovered.jul16,
+          grecovered.jul17,
+          grecovered.jul18,
+          grecovered.jul19,
+          grecovered.jul20,
+          grecovered.jul21,
+          grecovered.jul22,
+          grecovered.jul23,
+          grecovered.jul24,
+          grecovered.jul25,
+          grecovered.jul26,
+          grecovered.jul27,
+          grecovered.jul28,
+          grecovered.jul29,
+          grecovered.jul30,
+          grecovered.jul31,
         ],
       },
     ],
@@ -2062,6 +2170,8 @@ var uschart = new Chart(ctx3, {
       "June 28",
       "June 29",
       "June 30",
+      "July 1",
+      "July 2",
     ],
     datasets: [
       {
@@ -2168,6 +2278,37 @@ var uschart = new Chart(ctx3, {
           usdeathbank.jun28,
           usdeathbank.jun29,
           usdeathbank.jun30,
+          usdeathbank.jul01,
+          usdeathbank.jul02,
+          usdeathbank.jul03,
+          usdeathbank.jul04,
+          usdeathbank.jul05,
+          usdeathbank.jul06,
+          usdeathbank.jul07,
+          usdeathbank.jul08,
+          usdeathbank.jul09,
+          usdeathbank.jul10,
+          usdeathbank.jul11,
+          usdeathbank.jul12,
+          usdeathbank.jul13,
+          usdeathbank.jul14,
+          usdeathbank.jul15,
+          usdeathbank.jul16,
+          usdeathbank.jul17,
+          usdeathbank.jul18,
+          usdeathbank.jul19,
+          usdeathbank.jul20,
+          usdeathbank.jul21,
+          usdeathbank.jul22,
+          usdeathbank.jul23,
+          usdeathbank.jul24,
+          usdeathbank.jul25,
+          usdeathbank.jul26,
+          usdeathbank.jul27,
+          usdeathbank.jul28,
+          usdeathbank.jul29,
+          usdeathbank.jul30,
+          usdeathbank.jul31,
         ],
       },
     ],
@@ -2291,6 +2432,8 @@ var newchart = new Chart(ctx4, {
       "June 28",
       "June 29",
       "June 30",
+      "July 1",
+      "July 2",
     ],
     datasets: [
       {
@@ -2398,6 +2541,37 @@ var newchart = new Chart(ctx4, {
           usdeathbank.jun28,
           usdeathbank.jun29,
           usdeathbank.jun30,
+          usdeathbank.jul01,
+          usdeathbank.jul02,
+          usdeathbank.jul03,
+          usdeathbank.jul04,
+          usdeathbank.jul05,
+          usdeathbank.jul06,
+          usdeathbank.jul07,
+          usdeathbank.jul08,
+          usdeathbank.jul09,
+          usdeathbank.jul10,
+          usdeathbank.jul11,
+          usdeathbank.jul12,
+          usdeathbank.jul13,
+          usdeathbank.jul14,
+          usdeathbank.jul15,
+          usdeathbank.jul16,
+          usdeathbank.jul17,
+          usdeathbank.jul18,
+          usdeathbank.jul19,
+          usdeathbank.jul20,
+          usdeathbank.jul21,
+          usdeathbank.jul22,
+          usdeathbank.jul23,
+          usdeathbank.jul24,
+          usdeathbank.jul25,
+          usdeathbank.jul26,
+          usdeathbank.jul27,
+          usdeathbank.jul28,
+          usdeathbank.jul29,
+          usdeathbank.jul30,
+          usdeathbank.jul31,
         ],
       },
 
@@ -2506,6 +2680,37 @@ var newchart = new Chart(ctx4, {
           usactivecases.jun28,
           usactivecases.jun29,
           usactivecases.jun30,
+          usactivecases.jul01,
+          usactivecases.jul02,
+          usactivecases.jul03,
+          usactivecases.jul04,
+          usactivecases.jul05,
+          usactivecases.jul06,
+          usactivecases.jul07,
+          usactivecases.jul08,
+          usactivecases.jul09,
+          usactivecases.jul10,
+          usactivecases.jul11,
+          usactivecases.jul12,
+          usactivecases.jul13,
+          usactivecases.jul14,
+          usactivecases.jul15,
+          usactivecases.jul16,
+          usactivecases.jul17,
+          usactivecases.jul18,
+          usactivecases.jul19,
+          usactivecases.jul20,
+          usactivecases.jul21,
+          usactivecases.jul22,
+          usactivecases.jul23,
+          usactivecases.jul24,
+          usactivecases.jul25,
+          usactivecases.jul26,
+          usactivecases.jul27,
+          usactivecases.jul28,
+          usactivecases.jul29,
+          usactivecases.jul30,
+          usactivecases.jul31,
         ],
       },
 
@@ -2615,6 +2820,37 @@ var newchart = new Chart(ctx4, {
           usrecovered.jun28,
           usrecovered.jun29,
           usrecovered.jun30,
+          usrecovered.jul01,
+          usrecovered.jul02,
+          usrecovered.jul03,
+          usrecovered.jul04,
+          usrecovered.jul05,
+          usrecovered.jul06,
+          usrecovered.jul07,
+          usrecovered.jul08,
+          usrecovered.jul09,
+          usrecovered.jul10,
+          usrecovered.jul11,
+          usrecovered.jul12,
+          usrecovered.jul13,
+          usrecovered.jul14,
+          usrecovered.jul15,
+          usrecovered.jul16,
+          usrecovered.jul17,
+          usrecovered.jul18,
+          usrecovered.jul19,
+          usrecovered.jul20,
+          usrecovered.jul21,
+          usrecovered.jul22,
+          usrecovered.jul23,
+          usrecovered.jul24,
+          usrecovered.jul25,
+          usrecovered.jul26,
+          usrecovered.jul27,
+          usrecovered.jul28,
+          usrecovered.jul29,
+          usrecovered.jul30,
+          usrecovered.jul31,
         ],
       },
     ],
@@ -2738,6 +2974,8 @@ var uschart = new Chart(ctx5, {
       "June 28",
       "June 29",
       "June 30",
+      "July 1",
+      "July 2",
     ],
     datasets: [
       {
@@ -2844,6 +3082,37 @@ var uschart = new Chart(ctx5, {
           utahdeathbank.jun28,
           utahdeathbank.jun29,
           utahdeathbank.jun30,
+          utahdeathbank.jul01,
+          utahdeathbank.jul02,
+          utahdeathbank.jul03,
+          utahdeathbank.jul04,
+          utahdeathbank.jul05,
+          utahdeathbank.jul06,
+          utahdeathbank.jul07,
+          utahdeathbank.jul08,
+          utahdeathbank.jul09,
+          utahdeathbank.jul10,
+          utahdeathbank.jul11,
+          utahdeathbank.jul12,
+          utahdeathbank.jul13,
+          utahdeathbank.jul14,
+          utahdeathbank.jul15,
+          utahdeathbank.jul16,
+          utahdeathbank.jul17,
+          utahdeathbank.jul18,
+          utahdeathbank.jul19,
+          utahdeathbank.jul20,
+          utahdeathbank.jul21,
+          utahdeathbank.jul22,
+          utahdeathbank.jul23,
+          utahdeathbank.jul24,
+          utahdeathbank.jul25,
+          utahdeathbank.jul26,
+          utahdeathbank.jul27,
+          utahdeathbank.jul28,
+          utahdeathbank.jul29,
+          utahdeathbank.jul30,
+          utahdeathbank.jul31,
         ],
       },
     ],
@@ -2967,6 +3236,8 @@ var newchart = new Chart(ctx6, {
       "June 28",
       "June 29",
       "June 30",
+      "July 1",
+      "July 2",
     ],
     datasets: [
       {
@@ -3074,6 +3345,37 @@ var newchart = new Chart(ctx6, {
           utahdeathbank.jun28,
           utahdeathbank.jun29,
           utahdeathbank.jun30,
+          utahdeathbank.jul01,
+          utahdeathbank.jul02,
+          utahdeathbank.jul03,
+          utahdeathbank.jul04,
+          utahdeathbank.jul05,
+          utahdeathbank.jul06,
+          utahdeathbank.jul07,
+          utahdeathbank.jul08,
+          utahdeathbank.jul09,
+          utahdeathbank.jul10,
+          utahdeathbank.jul11,
+          utahdeathbank.jul12,
+          utahdeathbank.jul13,
+          utahdeathbank.jul14,
+          utahdeathbank.jul15,
+          utahdeathbank.jul16,
+          utahdeathbank.jul17,
+          utahdeathbank.jul18,
+          utahdeathbank.jul19,
+          utahdeathbank.jul20,
+          utahdeathbank.jul21,
+          utahdeathbank.jul22,
+          utahdeathbank.jul23,
+          utahdeathbank.jul24,
+          utahdeathbank.jul25,
+          utahdeathbank.jul26,
+          utahdeathbank.jul27,
+          utahdeathbank.jul28,
+          utahdeathbank.jul29,
+          utahdeathbank.jul30,
+          utahdeathbank.jul31,
         ],
       },
 
@@ -3182,6 +3484,37 @@ var newchart = new Chart(ctx6, {
           utahactivecases.jun28,
           utahactivecases.jun29,
           utahactivecases.jun30,
+          utahactivecases.jul01,
+          utahactivecases.jul02,
+          utahactivecases.jul03,
+          utahactivecases.jul04,
+          utahactivecases.jul05,
+          utahactivecases.jul06,
+          utahactivecases.jul07,
+          utahactivecases.jul08,
+          utahactivecases.jul09,
+          utahactivecases.jul10,
+          utahactivecases.jul11,
+          utahactivecases.jul12,
+          utahactivecases.jul13,
+          utahactivecases.jul14,
+          utahactivecases.jul15,
+          utahactivecases.jul16,
+          utahactivecases.jul17,
+          utahactivecases.jul18,
+          utahactivecases.jul19,
+          utahactivecases.jul20,
+          utahactivecases.jul21,
+          utahactivecases.jul22,
+          utahactivecases.jul23,
+          utahactivecases.jul24,
+          utahactivecases.jul25,
+          utahactivecases.jul26,
+          utahactivecases.jul27,
+          utahactivecases.jul28,
+          utahactivecases.jul29,
+          utahactivecases.jul30,
+          utahactivecases.jul31,
         ],
       },
 
@@ -3291,6 +3624,37 @@ var newchart = new Chart(ctx6, {
           utahrecovered.jun28,
           utahrecovered.jun29,
           utahrecovered.jun30,
+          utahrecovered.jul01,
+          utahrecovered.jul02,
+          utahrecovered.jul03,
+          utahrecovered.jul04,
+          utahrecovered.jul05,
+          utahrecovered.jul06,
+          utahrecovered.jul07,
+          utahrecovered.jul08,
+          utahrecovered.jul09,
+          utahrecovered.jul10,
+          utahrecovered.jul11,
+          utahrecovered.jul12,
+          utahrecovered.jul13,
+          utahrecovered.jul14,
+          utahrecovered.jul15,
+          utahrecovered.jul16,
+          utahrecovered.jul17,
+          utahrecovered.jul18,
+          utahrecovered.jul19,
+          utahrecovered.jul20,
+          utahrecovered.jul21,
+          utahrecovered.jul22,
+          utahrecovered.jul23,
+          utahrecovered.jul24,
+          utahrecovered.jul25,
+          utahrecovered.jul26,
+          utahrecovered.jul27,
+          utahrecovered.jul28,
+          utahrecovered.jul29,
+          utahrecovered.jul30,
+          utahrecovered.jul31,
         ],
       },
     ],
@@ -3309,9 +3673,6 @@ var newchart = new Chart(ctx6, {
 });
 
 
-console.log("active cases globally yeserday was " + gactivecasesyesterday);
-console.log("active cases us yeserday was " + usactivecasesyesterday);
-console.log("active cases utah yeserday was " + utahactivecasesyesterday);
 
 var gactivecaseschange = gactivecasestoday - gactivecasesyesterday;
 var usactivecaseschange = usactivecasestoday - usactivecasesyesterday;
@@ -3344,11 +3705,8 @@ if (utahactivecaseschange > -1) {
 }
 
 var gcasechangethree = gcasestwoweeksago - gcasesthreeweeksago;
-console.log("two weeks global change is " + gcasechangethree);
 var gcasechangetwo = gcasesoneweekago - gcasestwoweeksago;
-console.log("last weeks global change is " + gcasechangetwo);
 var gcasechangeone = todaytotal - gcasesoneweekago;
-console.log("this weeks global change is " + gcasechangeone);
 
 var glastweekgrowthrate = gcasechangetwo / gcasechangethree;
 var gthisweekgrowthrate = gcasechangeone / gcasechangetwo;
@@ -3411,17 +3769,12 @@ $("#gaveragegrowthrate").html();
 var changeyesterday = yesterday - twodaysago;
 var changetoday = today - yesterday;
 $("#numbershere").html("+" + changetoday.toLocaleString());
-console.log("new cases in US is " + changetoday);
 var growthrate = changetoday / changeyesterday;
 $("#usgrowth").html(Math.round(growthrate * 100) / 100);
-console.log("the growth rate in the US today is " + growthrate);
-console.log("-----------");
 var total = "";
 var tomorrow = today + growthrate * changetoday;
-console.log("cases the next day in the US will be " + Math.round(tomorrow));
 var roundedtomorrow = Math.round(tomorrow);
 $("#uscasestomorrow").html(roundedtomorrow.toLocaleString());
-console.log("-----------");
 $("#ustotal").html(today.toLocaleString());
 var growth = [];
 
@@ -3430,12 +3783,9 @@ $("#btn-generator").on("click", function () {
   function multiplier() {
     yesterday = today;
     today = tomorrow;
-    console.log(today);
     changetoday = today - yesterday;
     tomorrow = tomorrow + growthrate * changetoday;
-    console.log(tomorrow);
     growth.push(Math.round(tomorrow));
-    console.log(growth);
     for (var i = 0; i < growth.length; i++) {
       document.getElementById("array-here").innerHTML = html +=
         "<li>" + "In " + (i + 2) + " days: " + Math.round(growth[i]) + "</li>";
@@ -3447,9 +3797,6 @@ $("#btn-generator").on("click", function () {
     }
   }
   multiplier();
-  console.log("the day after that in the US will be " + Math.round(tomorrow));
-
-  console.log("---------");
 }); //button bracket
 
 $("#btn-global").on("click", function () {
@@ -3461,9 +3808,7 @@ $("#btn-global").on("click", function () {
     globalchangetoday = todaytotal - yesterdaytotal;
     globalcasestomorrow =
       globalcasestomorrow + growthratetoday * globalchangetoday;
-    console.log(tomorrow);
     globalgrowth.push(Math.round(globalcasestomorrow));
-    console.log(globalgrowth);
     for (var x = 0; x < globalgrowth.length; x++) {
       document.getElementById("global-here").innerHTML = htmltwo +=
         "<li>" +
@@ -3481,11 +3826,8 @@ $("#btn-global").on("click", function () {
   } //end if statment
 
   multiplierglobal();
-  console.log(
-    "the day after that Globally will be " + Math.round(globalcasestomorrow)
-  );
+ 
 
-  console.log("---------");
 }); //button bracket
 
 $("#gcasesyesterday").html(yesterdaytotal.toLocaleString());
@@ -3497,26 +3839,21 @@ $("#gcasestoday").html(todaytotal.toLocaleString());
 
 var globalchangetoday = todaytotal - yesterdaytotal;
 $("#gcaseschange").html("+" + globalchangetoday.toLocaleString());
-console.log("new cases today is " + globalchangetoday);
 var globalchangeyesterday = yesterdaytotal - twodaysagoglobal;
 $("#gcaseschangeyesterday").html(yesterdaytotal.toLocaleString());
 
 var growthratetoday = globalchangetoday / globalchangeyesterday;
-console.log("growth rate today is " + growthratetoday);
 $("#casesgrowth").html(Math.round(growthratetoday * 100) / 100);
 
 var globalcasestomorrow = growthratetoday * globalchangetoday + todaytotal;
-console.log(Math.round(globalcasestomorrow));
 var roundedglobaltomorrow = Math.round(globalcasestomorrow);
 $("#gcasestomorrow").html(roundedglobaltomorrow.toLocaleString());
 var globalgrowth = [];
 
 $("#deathstoday").html(deathstoday.toLocaleString());
 
-console.log("deaths today is " + deathstoday);
 var deathschangetoday = deathstoday - deathsyesterday;
 $("#newdeaths").html("+" + deathschangetoday.toLocaleString());
-console.log("new deaths today is " + deathschangetoday);
 var deathschangeyesterday = deathsyesterday - deathstwo;
 $("#deathsyesterday").html(deathsyesterday.toLocaleString());
 
@@ -3528,10 +3865,8 @@ var roundeddeathstomorrow = Math.round(deathstomorrow);
 $("#deathstomorrow").html(roundeddeathstomorrow.toLocaleString());
 
 $("#usdeaths").html(usdeathstoday.toLocaleString());
-console.log("deaths today is " + usdeathstoday);
 var usdeathschangetoday = usdeathstoday - usdeathsyesterday;
 $("#usnewdeaths").html("+" + usdeathschangetoday.toLocaleString());
-console.log("new deaths today is " + usdeathschangetoday);
 var usdeathschangeyesterday = usdeathsyesterday - usdeathstwo;
 $("#usdeathsyesterday").html(usdeathsyesterday.toLocaleString());
 
@@ -3545,25 +3880,18 @@ $("#usdeathstomorrow").html(usroundeddeathstomorrow.toLocaleString());
 var utahchangeyesterday = utahyesterday - utahtwodaysago;
 var utahchangetoday = utahtoday - utahyesterday;
 $("#utahnumbershere").html("+" + utahchangetoday.toLocaleString());
-console.log("new cases in US is " + utahchangetoday);
 var utahgrowthrate = utahchangetoday / utahchangeyesterday;
 $("#utahgrowth").html(Math.round(utahgrowthrate * 100) / 100);
-console.log("the growth rate in the US today is " + utahgrowthrate);
-console.log("-----------");
 var total = "";
 var utahtomorrow = utahtoday + utahgrowthrate * utahchangetoday;
-console.log("cases the next day in the US will be " + Math.round(utahtomorrow));
 var utahroundedtomorrow = Math.round(utahtomorrow);
 $("#utahcasestomorrow").html(utahroundedtomorrow.toLocaleString());
-console.log("-----------");
 $("#utahtotal").html(utahtoday.toLocaleString());
 var growth = [];
 
 $("#utahdeaths").html(utahdeathstoday.toLocaleString());
-console.log("deaths today is " + utahdeathstoday);
 var utahdeathschangetoday = utahdeathstoday - utahdeathsyesterday;
 $("#utahnewdeaths").html("+" + utahdeathschangetoday.toLocaleString());
-console.log("new deaths today is " + utahdeathschangetoday);
 var utahdeathschangeyesterday = utahdeathsyesterday - utahdeathstwo;
 $("#usdeathsyesterday").html(utahdeathsyesterday.toLocaleString());
 
