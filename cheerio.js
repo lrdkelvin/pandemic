@@ -92,53 +92,53 @@ const run = async () => {
             (utahCasesScript.indexOf("]", utahCasesScript.indexOf("data")) +1 ));
 
 
-            fs.writeFile('scraped.js', ("var deathsStuffs =" + scrapedGlobalDeaths + ";"), function (err) {
+            fs.writeFile('./public/assets/javascript/scraped.js', ("var deathsStuffs =" + scrapedGlobalDeaths + ";"), function (err) {
                 if (err) throw err;
                 console.log('Replaced!');
               });
 
               setTimeout(() => {
-                fs.appendFile('scraped.js', ("var globalstuffs =" + scrapedGlobalCases + ";"), function (err) {
+                fs.appendFile('./public/assets/javascript/scraped.js', ("var globalstuffs =" + scrapedGlobalCases + ";"), function (err) {
                     if (err) throw err;
                     console.log('updated!');
                   });
-                  fs.appendFile('scraped.js', ("var gdailycases =" + scrapedGlobalCasesDay + ";"), function (err) {
+                  fs.appendFile('./public/assets/javascript/scraped.js', ("var gdailycases =" + scrapedGlobalCasesDay + ";"), function (err) {
                     if (err) throw err;
                     console.log('updated!');
                   });
-                  fs.appendFile('scraped.js', ("var gdailydeaths =" + scrapedGlobalDeathsDay + ";"), function (err) {
+                  fs.appendFile('./public/assets/javascript/scraped.js', ("var gdailydeaths =" + scrapedGlobalDeathsDay + ";"), function (err) {
                     if (err) throw err;
                     console.log('updated!');
                   });
-                  fs.appendFile('scraped.js', ("var uscases=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUsCases+ ";"), function (err) {
+                  fs.appendFile('./public/assets/javascript/scraped.js', ("var uscases=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUsCases+ ";"), function (err) {
                     if (err) throw err;
                     console.log('updated!');
                   });
-                  fs.appendFile('scraped.js', ("var usdeaths=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUsDeaths+ ";"), function (err) {
+                  fs.appendFile('./public/assets/javascript/scraped.js', ("var usdeaths=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUsDeaths+ ";"), function (err) {
                     if (err) throw err;
                     console.log('updated!');
                   });
-                  fs.appendFile('scraped.js', ("var usdailydeaths=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUsDeathsDay+ ";"), function (err) {
+                  fs.appendFile('./public/assets/javascript/scraped.js', ("var usdailydeaths=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUsDeathsDay+ ";"), function (err) {
                     if (err) throw err;
                     console.log('updated!');
                   });
-                  fs.appendFile('scraped.js', ("var usdailycases=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUsCasesDay+ ";"), function (err) {
+                  fs.appendFile('./public/assets/javascript/scraped.js', ("var usdailycases=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUsCasesDay+ ";"), function (err) {
                     if (err) throw err;
                     console.log('updated!');
                   });
-                  fs.appendFile('scraped.js', ("var utahcases=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUtahCases+ ";"), function (err) {
+                  fs.appendFile('./public/assets/javascript/scraped.js', ("var utahcases=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUtahCases+ ";"), function (err) {
                     if (err) throw err;
                     console.log('updated!');
                   });
-                  fs.appendFile('scraped.js', ("var utahdeaths=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUtahDeaths+ ";"), function (err) {
+                  fs.appendFile('./public/assets/javascript/scraped.js', ("var utahdeaths=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUtahDeaths+ ";"), function (err) {
                     if (err) throw err;
                     console.log('updated!');
                   });
-                  fs.appendFile('scraped.js', ("var utahdailydeaths=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUtahDeathsDay+ ";"), function (err) {
+                  fs.appendFile('./public/assets/javascript/scraped.js', ("var utahdailydeaths=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUtahDeathsDay+ ";"), function (err) {
                     if (err) throw err;
                     console.log('updated!');
                   });
-                  fs.appendFile('scraped.js', ("var utahdailycases=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUtahCasesDay+ ";"), function (err) {
+                  fs.appendFile('./public/assets/javascript/scraped.js', ("var utahdailycases=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0," + scrapedUtahCasesDay+ ";"), function (err) {
                     if (err) throw err;
                     console.log('updated!');
                   });
