@@ -1,3 +1,4 @@
+
 var dates = [];
 var globaldeathdates = [];
 var uscasedates = [];
@@ -10,203 +11,11 @@ var uscasebank = {};
 var usdeathbank = {};
 var utahcasebank = {};
 var utahdeathbank = {};
-var gdailycases = [0,265,472,698,785,1781,1477,1755,2010,2127,2603,2838,3239,3915,3721,3173,3437,2676,3001,2546,2035,14153,5151,2662,2097,2132,2003,1852,516,977,996,978,554,885,738,992,1288,1509,1989,1980,1862,2570,2306,3090,3637,4052,3894,4434,4644,7232,8258,10912,10959,13016,12933,15763,20684,26139,30664,29405,32433,41543,43790,48615,60931,64642,66753,60457,64222,73993,77108,80163,84041,81554,70426,73027,78334,84421,85195,91533,79212,71481,70034,73063,82749,80761,84928,80278,75146,73445,75417,80058,84838,101687,90241,73248,69341,75434,79852,85839,94973,82892,82157,79422,81434,95879,96323,96589,89337,80204,74653,85728,89764,97297,100388,96954,82555,90478,95856,103534,108405,108935,100495,97347,90906,93892,107540,117746,126927,125462,109912,105727,116418,121368,131429,131402,129631,114905,108636,122005,136903,139257,143398,135252,124521,126071,144125,146588,141603,182487,158035,131074,140072,164507,174306,181199,195402,178388,164645,162047,175343,198785,209546,213778,195788,178387,171737,208301]                
-var gdailydeaths = [0,0,0,0,0,0,0,0,27,31,36,40,46,51,56,61,67,72,79,84,89,100,106,115,122,123,123,127,124,123,119,113,121,118,108,96,87,81,73,62,60,63,69,75,82,89,110,130,156,192,228,276,321,386,451,529,622,729,862,1039,1176,1360,1599,1829,2096,2394,2689,2936,3256,3576,3948,4425,4787,5136,5378,5586,6039,6267,6465,6663,6690,6776,6788,6723,6922,6831,6985,7036,6935,6912,6882,6661,6622,6325,6253,6091,5942,5875,5870,5735,5632,5508,5469,5409,5277,5308,5278,5253,5107,5176,5089,5049,4817,4771,4701,4710,4653,4650,4514,4429,4383,4333,4308,4244,4220,4106,4202,4165,4203,4195,4209,4175,4303,4247,4372,4370,4392,4414,4429,4443,4475,4394,4351,4348,4328,4364,4624,4632,4655,4725,4754,4763,4819,4658,4636,4639,4602,4615,4633,4576,4517,4488,4484,4532,4527,4545,4563,4630]
-var usdailydeaths = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,5,3,2,1,3,4,3,4,4,8,3,7,10,15,22,26,50,69,70,66,136,181,269,307,359,501,650,501,822,1099,1259,1211,1282,1577,1423,1523,2267,2210,2146,2280,2066,1756,1746,2626,2690,2254,2596,1921,1594,1981,2749,2409,2402,1992,2110,1170,1403,2537,2442,2274,1947,1730,1175,1338,2404,2574,2173,1713,1451,1215,1075,1912,1857,1791,1637,1239,882,1018,1582,1432,1432,1322,1053,626,636,783,1563,1239,1234,1033,651,695,1147,1104,1050,988,717,384,598,1105,998,918,800,716,336,432,859,819,758,729,582,271,369,871,819,653,663,512,285,366,727,676,687,626,265,262,378,993];
-var usdailycases = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,20,0,0,18,4,3,0,3,5,7,25,24,34,63,98,116,106,163,290,307,330,554,589,848,988,1754,2965,4598,5671,4884,9441,10368,11244,13548,17502,18892,19638,20249,23256,25267,27068,30531,32911,34634,25860,31707,34031,32477,34042,34201,30445,27815,27061,27390,30649,30089,32458,29157,26150,28179,26194,30262,32022,39096,35483,26545,23241,25540,28565,30970,36130,29838,27389,24736,24880,25561,29618,29266,26218,20801,18692,23013,22380,28081,27606,24321,20179,23520,20790,22659,28827,24656,21933,19922,19906,19395,20744,23068,25683,23756,20745,22421,22281,20824,22841,25419,22856,18929,19058,19082,21034,23483,27398,25486,20178,20897,25628,26253,27958,33577,33427,26115,31534,36059,38432,40232,47361,43596,40559,44764,46068,52358,57318,58910,49818,45931,50584,55442];
-console.log("gdailycase" + gdailycases.length)
-console.log("gdailydeath" + gdailycases.length)
-console.log("usdailycase" + gdailycases.length)
-console.log("usdailydeath" + gdailycases.length)
+
 
 var gcaserank = [];
 var uscaserank = [];
-var globalstuffs = [580,845,1317,2015,2800,4581,6058,7813,9823,11950,14553,17391,20630,24545,28266,31439,34876,37552,40553,43099,45134,59287,64438,67100,69197,71329,73332,75184,75700,76677,77673,78651,79205,80090,80828,81820,83108,84617,86606,88586,90448,93018,95324,98414,102051,106103,109997,114431,119075,126307,134565,145477,156436,169452,182385,198148,218832,244971,275635,305040,337473,379016,422806,471421,532352,596994,663747,724204,788426,862419,939527,1019690,1103731,1185285,1255711,1328738,1407072,1491493,1576688,1668221,1747433,1818914,1888948,1962011,2044760,2125521,2210449,2290727,2365873,2439318,2514735,2594793,2679631,2781318,2871559,2944807,3014148,3089582,3169434,3255273,3350246,3433138,3515295,3594717,3676151,3772030,3868353,3964942,4054279,4134483,4209136,4294864,4384628,4481925,4582313,4679267,4761822,4852300,4948156,5051690,5160095,5269030,5369525,5466872,5557778,5651670,5759210,5876956,6003883,6129345,6239257,6344984,6461402,6582770,6714199,6845601,6975232,7090137,7198773,7320778,7457681,7596938,7740336,7875588,8000109,8126180,8270305,8416893,8558496,8740983,8899018,9030092,9170164,9334671,9508977,9690176,9885578,10063966,10228611,10390658,10566001,10764786,10974332,11188110,11383898,11562285,11734022,11942323];
-
-var deathsStuffs = [17,25,41,56,80,106,132,170,213,259,304,362,426,492,565,638,724,813,910,1018,1115,1261,1383,1526,1669,1775,1873,2009,2126,2247,2360,2460,2618,2699,2763,2800,2858,2923,2977,3050,3117,3202,3285,3387,3493,3598,3826,4023,4297,4627,4980,5428,5842,6533,7178,7997,8983,10083,11466,13114,14762,16699,19193,21785,24750,28226,31936,35315,39490,44226,49425,55724,61734,67886,72960,78597,86497,93295,100975,108378,114713,120391,126114,133558,141751,148790,157275,163963,168939,174500,181726,188379,195147,201552,207730,211574,216095,222850,229471,235292,240976,246288,249855,253959,259786,266628,272242,277743,282042,286084,289583,295125,300353,305638,310649,315009,318657,322135,326720,331356,336317,340981,345170,348364,351673,355459,360776,365470,370398,374539,377824,380902,385575,390505,396079,400989,405278,408722,411906,416678,421830,426833,431449,435715,439016,442456,449045,454255,459414,464529,468994,472355,476190,481650,486707,491888,496738,501303,504785,508224,513268,518120,523277,528461,532994,536597,540170,545674];
-
-var uscases = [
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  15,15,15,15,15,15,35,35,35,53,57,60,60,63,68,75,100,124,158,221,319,435,541,704,994,1301,1631,2185,2774,3622,4610,6364,9329,13927,19598,24482,33923,44291,55535,69083,86585,105477,125115,145364,168620,193887,220955,251486,284397,319031,344891,376598,410629,443106,477148,511349,541794,569609,596670,624060,654709,684798,717256,746413,772563,800742,826936,857198,889220,928316,963799,990344,1013585,1039125,1067690,1098660,1134790,1164628,1192017,1216753,1241633,1267194,1296812,1326078,1352296,1373097,1391789,1414802,1437182,1465263,1492869,1517190,1537369,1560889,1581679,1604338,1633165,1657821,1679754,1699676,1719582,1738977,1759721,1782789,1808472,1832228,1852973,1875394,1897675,1918499,1941340,1966759,1989615,2008544,2027602,2046684,2067718,2091201,2118599,2144085,2164263,2185160,2210788,2237041,2264999,2298576,2332003,2358118,2389652,2425711,2464143,2504375,2551736,2595332,2635891,2680655,2726723,2779081,2836399,2895309,2945127,2991058,3041642,3097084];
-var usdeaths = [
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  1,1,6,9,11,12,15,19,22,26,30,38,41,48,58,73,95,121,171,240,310,376,512,693,962,1269,1628,2129,2779,3280,4102,5201,6460,7671,8953,10530,11953,13476,15743,17953,20099,22379,24445,26201,27947,30573,33263,35517,38113,40034,41628,43609,46358,48767,51169,53161,55271,56441,57844,60381,62823,65097,67044,68774,69949,71287,73691,76265,78438,80151,81602,82817,83892,85804,87661,89452,91089,92328,93210,94228,95810,97242,98674,99996,101049,101675,102311,103094,104657,105896,107130,108163,108814,109509,110656,111760,112810,113798,114515,114899,115497,116602,117600,118518,119318,120034,120370,120802,121661,122480,123238,123967,124549,124820,125189,126060,126879,127532,128195,128707,128992,129358,130085,130761,131448,132074,132339,132601,132979,133972];
-var utahcases = [
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  1, //march 11
-  5,9,10,28,39,51,63,80,112,136,181,257,298,346,402,480,602,719,806,887,1012,1074,1246,1428,1605,1675,1738,1846,1976,2102,2206,2303,2363,2412,2542,2683,2805,2931,3069,3213,3296,3445,3612,3782,3948,4123,4233,4343,4495,4672,4828,4981,5175,5317,5449,5595,5724,5919,6103,6251,6362,6432,6620,6749,6913,7068,7238,7384,7518,7710,7874,8057,8260,8392,8521,8620,8706,8921,9264,9533,9797,9999,10202,10497,10813,11252,11798,12066,12322,12559,12864,13252,13577,13981,14313,14608,14937,15344,15839,16425,17068,17462,17906,18300,18784,19374,20050,20628,21100,21664,22217,22716,23270,23866,24542,24952,25469,26033];
-
-var utahdeaths = [
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  1,1,1,1,1,2,2,2,4,5,7,7,7,8,8,13,13,13,13,17,18,18,18,19,20,21,23,25,27,28,32,34,35,39,41,41,41,45,45,46,46,49,50,50,56,58,61,61,66,67,68,73,75,75,77,78,80,80,88,90,92,93,97,97,98,101,105,106,107,112,113,113,113,117,117,120,121,121,124,127,128,131,139,139,139,143,145,149,152,155,155,158,158,163,163,164,166,167,167,168,172,173,176,181,181,184,190,194];
-
+var utahcaserank = [];
 
 utahcountycasebank = {
   jan01: 0,
@@ -214,7 +23,7 @@ utahcountycasebank = {
 };
 
 function createObjects() {
-  for (var i = 0; i < 169; i++) {
+  for (var i = 0; i < 170; i++) {
     if (i < 10) {
       var date = "jan" + (22 + i);
       dates.push(date);
@@ -269,7 +78,7 @@ dates.forEach((key, idx) => (utahdeathbank[key] = utahdeaths[idx]));
 
 
 function gcasecreate() {
-  for (var i=0; i < (gdailycases.length - 14); i++) {
+  for (var i=0; i < (gdailycases.length); i++) {
     var newDate = Math.round((gdailydeaths[i+ 14] / (gdailycases[i]) ) *10000) /100
     gcaserank.push(newDate);
   }
@@ -277,10 +86,15 @@ function gcasecreate() {
     var newDate = Math.round((usdailydeaths[i+ 14] / (usdailycases[i]) ) *10000) /100
     uscaserank.push(newDate);
   }
+  for (var i=0; i < (gdailycases.length - 14); i++) {
+    var newDate = Math.round((utahdailydeaths[i+ 14] / (utahdailycases[i]) ) *10000) /100
+    utahcaserank.push(newDate);
+  }
 }
 gcasecreate();
-console.log(gcaserank);
-console.log(uscaserank);
+console.log(utahcasebank);
+console.log(utahdeathbank);
+console.log(globalcasebank);
 var globalcaseprediction = 3308945;
 var uscasesprediction = 1096002;
 var utahcaseprediction = 4705;
@@ -1221,56 +1035,56 @@ var utahcountyactivecases = {
   may30: utahcountycasebank.may30 - utahcountyrecovered.may30,
 };
 
-          var twodaysago = uscasebank.jul05;
-var twodaysagoglobal = globalcasebank.jul05;
-      var deathstwo = globaldeathbank.jul05;
-        var usdeathstwo = usdeathbank.jul05;
-    var utahdeathstwo = utahdeathbank.jul05;
-    var utahtwodaysago = utahcasebank.jul05;
+          var twodaysago = uscasebank.jul07;
+var twodaysagoglobal = globalcasebank.jul07;
+      var deathstwo = globaldeathbank.jul07;
+        var usdeathstwo = usdeathbank.jul07;
+    var utahdeathstwo = utahdeathbank.jul07;
+    var utahtwodaysago = utahcasebank.jul07;
 
-              var utahyesterday = utahcasebank.jul06;
-       var utahdeathsyesterday = utahdeathbank.jul06;
-           var usdeathsyesterday = usdeathbank.jul06;
-         var deathsyesterday = globaldeathbank.jul06;
-           var yesterdaytotal = globalcasebank.jul06;
-                    var yesterday = uscasebank.jul06;
-      var gactivecasesyesterday = gactivecases.jul06;
-    var usactivecasesyesterday = usactivecases.jul06;
-var utahactivecasesyesterday = utahactivecases.jul06;
+              var utahyesterday = utahcasebank.jul08;
+       var utahdeathsyesterday = utahdeathbank.jul08;
+           var usdeathsyesterday = usdeathbank.jul08;
+         var deathsyesterday = globaldeathbank.jul08;
+           var yesterdaytotal = globalcasebank.jul08;
+                    var yesterday = uscasebank.jul08;
+      var gactivecasesyesterday = gactivecases.jul08;
+    var usactivecasesyesterday = usactivecases.jul08;
+var utahactivecasesyesterday = utahactivecases.jul08;
 
-       var utahdeathstoday = utahdeathbank.jul07;
-              var utahtoday = utahcasebank.jul07;
-           var usdeathstoday = usdeathbank.jul07;
-         var deathstoday = globaldeathbank.jul07;
-           var todaytotal = globalcasebank.jul07;
-                    var today = uscasebank.jul07;
-var utahactivecasestoday = utahactivecases.jul07;
-    var usactivecasestoday = usactivecases.jul07;
-      var gactivecasestoday = gactivecases.jul07;
+       var utahdeathstoday = utahdeathbank.jul09;
+              var utahtoday = utahcasebank.jul09;
+           var usdeathstoday = usdeathbank.jul09;
+         var deathstoday = globaldeathbank.jul09;
+           var todaytotal = globalcasebank.jul09;
+                    var today = uscasebank.jul09;
+var utahactivecasestoday = utahactivecases.jul09;
+    var usactivecasestoday = usactivecases.jul09;
+      var gactivecasestoday = gactivecases.jul09;
 
-        var gcasesoneweekago = globalcasebank.jun30;
-     var utahdeathsoneweekago = utahdeathbank.jun30;
-           var uscasesoneweekago = uscasebank.jun30;
-       var utahcasesoneweekago = utahcasebank.jun30;
-      var gdeathsoneweekago = globaldeathbank.jun30;
-         var usdeathsoneweekago = usdeathbank.jun30;
-var utahactivecaseslastweek = utahactivecases.jun30;
-    var usactivecaseslastweek = usactivecases.jun30;
-      var gactivecaseslastweek = gactivecases.jun30;
+        var gcasesoneweekago = globalcasebank.jul02;
+     var utahdeathsoneweekago = utahdeathbank.jul02;
+           var uscasesoneweekago = uscasebank.jul02;
+       var utahcasesoneweekago = utahcasebank.jul02;
+      var gdeathsoneweekago = globaldeathbank.jul02;
+         var usdeathsoneweekago = usdeathbank.jul02;
+var utahactivecaseslastweek = utahactivecases.jul02;
+    var usactivecaseslastweek = usactivecases.jul02;
+      var gactivecaseslastweek = gactivecases.jul02;
 
-   var gcasestwoweeksago = globalcasebank.jun23;
-    var usdeathstwoweeksago = usdeathbank.jun23;
-  var utahcasestwoweeksago = utahcasebank.jun23;
- var gdeathstwoweeksago = globaldeathbank.jun23;
-      var uscasestwoweeksago = uscasebank.jun23;
-var utahdeathstwoweeksago = utahdeathbank.jun23;
+   var gcasestwoweeksago = globalcasebank.jun25;
+    var usdeathstwoweeksago = usdeathbank.jun25;
+  var utahcasestwoweeksago = utahcasebank.jun25;
+ var gdeathstwoweeksago = globaldeathbank.jun25;
+      var uscasestwoweeksago = uscasebank.jun25;
+var utahdeathstwoweeksago = utahdeathbank.jun25;
 
-      var uscasesthreeweeksago = uscasebank.jun16;
-  var gdeathsthreeweekago = globaldeathbank.jun16;
-  var utahcasesthreeweeksago = utahcasebank.jun16;
-    var usdeathsthreeweeksago = usdeathbank.jun16;
-var utahdeathsthreeweeksago = utahdeathbank.jun16;
-   var gcasesthreeweeksago = globalcasebank.jun16;
+      var uscasesthreeweeksago = uscasebank.jun18;
+  var gdeathsthreeweekago = globaldeathbank.jun18;
+  var utahcasesthreeweeksago = utahcasebank.jun18;
+    var usdeathsthreeweeksago = usdeathbank.jun18;
+var utahdeathsthreeweeksago = utahdeathbank.jun18;
+   var gcasesthreeweeksago = globalcasebank.jun18;
 
 var glastweekchange = todaytotal - gcasesoneweekago;
 var uslastweekchange = today - uscasesoneweekago;
@@ -1388,7 +1202,9 @@ var stackedLine = new Chart(ctx, {
       "July 4",
       "July 5",
       "July 6",
-      "July 7"
+      "July 7",
+      "July 8",
+      "July 9"
     ],
     datasets: [
       {
@@ -1657,7 +1473,9 @@ var newchart = new Chart(ctx2, {
       "July 4",
       "July 5",
       "July 6",
-      "July 7"
+      "July 7",
+      "July 8",
+      "July 9"
     ],
     datasets: [
       {
@@ -2204,7 +2022,9 @@ var uschart = new Chart(ctx3, {
       "July 4",
       "July 5",
       "July 6",
-      "July 7"
+      "July 7",
+      "July 8",
+      "July 9"
     ],
     datasets: [
       {
@@ -2471,7 +2291,9 @@ var newchart = new Chart(ctx4, {
       "July 4",
       "July 5",
       "July 6",
-      "July 7"
+      "July 7",
+      "July 8",
+      "July 9"
     ],
     datasets: [
       {
@@ -3018,7 +2840,9 @@ var uschart = new Chart(ctx5, {
       "July 4",
       "July 5",
       "July 6",
-      "July 7"
+      "July 7",
+      "July 8",
+      "July 9"
     ],
     datasets: [
       {
@@ -3719,7 +3543,6 @@ var newchart = new Chart(ctx6, {
     },
   },
 });
-
 var ctx7 = document.getElementById("myChart7").getContext("2d");
 var uschart = new Chart(ctx7, {
   // The type of chart we want to create
@@ -3819,6 +3642,8 @@ var uschart = new Chart(ctx7, {
       "June 21",
       "June 22",
       "June 23",
+      "June 24",
+      "June 25",
     ],
     datasets: [
       {
@@ -3919,6 +3744,7 @@ var uschart = new Chart(ctx7, {
           gcaserank[152],
           gcaserank[153],
           gcaserank[154],
+          gcaserank[155],
     
         ],
       },
@@ -4035,6 +3861,8 @@ var uschart = new Chart(ctx8, {
       "June 21",
       "June 22",
       "June 23",
+      "June 24",
+      "June 25",
     ],
     datasets: [
       {
@@ -4134,7 +3962,229 @@ var uschart = new Chart(ctx8, {
           uscaserank[151],
           uscaserank[152],
           uscaserank[153],
-          uscaserank[154]
+          uscaserank[154],
+          uscaserank[155],
+    
+        ],
+      },
+    ],
+  },
+
+  // Configuration options go here
+  options: {
+    scales: {
+      yAxes: [
+        {
+          stacked: false,
+        },
+      ],
+    },
+  },
+});
+
+var dateLabels = [
+  "March 25",
+  "March 26",
+  "March 27",
+  "March 28",
+  "March 29",
+  "March 30",
+  "March 31",
+  "April 1",
+  "April 2",
+  "April 3",
+  "April 4",
+  "April 5",
+  "April 6",
+  "April 7",
+  "April 8",
+  "April 9",
+  "April 10",
+  "April 11",
+  "April 12",
+  "April 13",
+  "April 14",
+  "April 15",
+  "April 16",
+  "April 17",
+  "April 18",
+  "April 19",
+  "April 20",
+  "April 21",
+  "April 22",
+  "April 23",
+  "April 24",
+  "April 25",
+  "April 26",
+  "April 27",
+  "April 28",
+  "April 29",
+  "April 30",
+  "May 1",
+  "May 2",
+  "May 3",
+  "May 4",
+  "May 5",
+  "May 6",
+  "May 7",
+  "May 8",
+  "May 9",
+  "May 10",
+  "May 11",
+  "May 12",
+  "May 13",
+  "May 14",
+  "May 15",
+  "May 16",
+  "May 17",
+  "May 18",
+  "May 19",
+  "May 20",
+  "May 21",
+  "May 22",
+  "May 23",
+  "May 24",
+  "May 25",
+  "May 26",
+  "May 27",
+  "May 28",
+  "May 29",
+  "May 30",
+  "May 31",
+  "June 1",
+  "June 2",
+  "June 3",
+  "June 4",
+  "June 5",
+  "June 6",
+  "June 7",
+  "June 8",
+  "June 9",
+  "June 10",
+  "June 11",
+  "June 12",
+  "June 13",
+  "June 14",
+  "June 15",
+  "June 16",
+  "June 17",
+  "June 18",
+  "June 19",
+  "June 20",
+  "June 21",
+  "June 22",
+  "June 23",
+  "June 24",
+  "June 25",
+];
+var ctx9 = document.getElementById("myChart9").getContext("2d");
+var utahchart = new Chart(ctx9, {
+  // The type of chart we want to create
+  type: "line",
+
+  // The data for our dataset
+  data: {
+    labels: dateLabels,
+    datasets: [
+      {
+        label: "percentage of cases in utah that resulted in death by day",
+        borderColor: "rgb(255, 99, 132)",
+        order: 1,
+
+        data: [
+          utahcaserank[62],
+          utahcaserank[63],
+          utahcaserank[64],
+          utahcaserank[65],
+          utahcaserank[66],
+          utahcaserank[67],
+          utahcaserank[68],
+          utahcaserank[69],
+          utahcaserank[70],
+          utahcaserank[71],
+          utahcaserank[72],
+          utahcaserank[73],
+          utahcaserank[74],
+          utahcaserank[75],
+          utahcaserank[76],
+          utahcaserank[77],
+          utahcaserank[78],
+          utahcaserank[79],
+          utahcaserank[80],
+          utahcaserank[81],
+          utahcaserank[82],
+          utahcaserank[83],
+          utahcaserank[84],
+          utahcaserank[85],
+          utahcaserank[86],
+          utahcaserank[87],
+          utahcaserank[88],
+          utahcaserank[89],
+          utahcaserank[90],
+          utahcaserank[91],
+          utahcaserank[92],
+          utahcaserank[93],
+          utahcaserank[94],
+          utahcaserank[95],
+          utahcaserank[96],
+          utahcaserank[97],
+          utahcaserank[98],
+          utahcaserank[99],
+          utahcaserank[100],
+          utahcaserank[101],
+          utahcaserank[102],
+          utahcaserank[103],
+          utahcaserank[104],
+          utahcaserank[105],
+          utahcaserank[106],
+          utahcaserank[107],
+          utahcaserank[108],
+          utahcaserank[109],
+          utahcaserank[110],
+          utahcaserank[111],
+          utahcaserank[112],
+          utahcaserank[113],
+          utahcaserank[114],
+          utahcaserank[115],
+          utahcaserank[116],
+          utahcaserank[117],
+          utahcaserank[118],
+          utahcaserank[119],
+          utahcaserank[120],
+          utahcaserank[121],
+          utahcaserank[123],
+          utahcaserank[124],
+          utahcaserank[125],
+          utahcaserank[126],
+          utahcaserank[127],
+          utahcaserank[128],
+          utahcaserank[129],
+          utahcaserank[130],
+          utahcaserank[131],
+          utahcaserank[132],
+          utahcaserank[133],
+          utahcaserank[134],
+          utahcaserank[135],
+          utahcaserank[136],
+          utahcaserank[137],
+          utahcaserank[138],
+          utahcaserank[139],
+          utahcaserank[140],
+          utahcaserank[141],
+          utahcaserank[142],
+          utahcaserank[143],
+          utahcaserank[144],
+          utahcaserank[145],
+          utahcaserank[146],
+          utahcaserank[147],
+          utahcaserank[148],
+          utahcaserank[149],
+          utahcaserank[150],
+          utahcaserank[151],
+          utahcaserank[152],
+          utahcaserank[153],
+          utahcaserank[154],
+          utahcaserank[155],
     
         ],
       },
