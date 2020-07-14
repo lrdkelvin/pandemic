@@ -23,7 +23,7 @@ utahcountycasebank = {
 };
 
 function createObjects() {
-  for (var i = 0; i < 172; i++) {
+  for (var i = 0; i < 174; i++) {
     if (i < 10) {
       var date = "jan" + (22 + i);
       dates.push(date);
@@ -95,6 +95,7 @@ gcasecreate();
 console.log(utahcasebank);
 console.log(utahdeathbank);
 console.log(globalcasebank);
+console.log(uscaserank);
 var globalcaseprediction = 3308945;
 var uscasesprediction = 1096002;
 var utahcaseprediction = 4705;
@@ -102,6 +103,39 @@ var utahcaseprediction = 4705;
 var globaldeathsprediction = 244428;
 var usdeathsprediction = 63970;
 var utahdeathsprediction = 46;
+var gcaserankavg = [];
+var uscaserankavg = [];
+var utahcaserankavg = [];
+
+for (var x = 0; x<(gcaserank.length - 62); x++) {
+  var average = (gcaserank[x+56] +
+  gcaserank[x+57] +
+  gcaserank[x+58] +
+  gcaserank[x+59] +
+  gcaserank[x+60] +
+  gcaserank[x+61] +
+  gcaserank[x+62] ) / 7;
+  var avg = (Math.round(average * 100))/100;
+  gcaserankavg.push(avg);
+  var usaverage = (uscaserank[x+56] +
+    uscaserank[x+57] +
+    uscaserank[x+58] +
+    uscaserank[x+59] +
+    uscaserank[x+60] +
+    uscaserank[x+61] +
+    uscaserank[x+62] ) / 7;
+    var usavg = (Math.round(usaverage * 100))/100;
+    uscaserankavg.push(usavg);
+    var utahaverage = (utahcaserank[x+56] +
+      utahcaserank[x+57] +
+      utahcaserank[x+58] +
+      utahcaserank[x+59] +
+      utahcaserank[x+60] +
+      utahcaserank[x+61] +
+      utahcaserank[x+62] ) / 7;
+      var utahavg = (Math.round(utahaverage * 100))/100;
+      utahcaserankavg.push(utahavg);
+}
 
 var grecovered = {
   mar25: globalcasebank.mar11 - globaldeathbank.mar25,
@@ -1035,56 +1069,56 @@ var utahcountyactivecases = {
   may30: utahcountycasebank.may30 - utahcountyrecovered.may30,
 };
 
-          var twodaysago = uscasebank.jul09;
-var twodaysagoglobal = globalcasebank.jul09;
-      var deathstwo = globaldeathbank.jul09;
-        var usdeathstwo = usdeathbank.jul09;
-    var utahdeathstwo = utahdeathbank.jul09;
-    var utahtwodaysago = utahcasebank.jul09;
+          var twodaysago = uscasebank.jul11;
+var twodaysagoglobal = globalcasebank.jul11;
+      var deathstwo = globaldeathbank.jul11;
+        var usdeathstwo = usdeathbank.jul11;
+    var utahdeathstwo = utahdeathbank.jul11;
+    var utahtwodaysago = utahcasebank.jul11;
 
-              var utahyesterday = utahcasebank.jul10;
-       var utahdeathsyesterday = utahdeathbank.jul10;
-           var usdeathsyesterday = usdeathbank.jul10;
-         var deathsyesterday = globaldeathbank.jul10;
-           var yesterdaytotal = globalcasebank.jul10;
-                    var yesterday = uscasebank.jul10;
-      var gactivecasesyesterday = gactivecases.jul10;
-    var usactivecasesyesterday = usactivecases.jul10;
-var utahactivecasesyesterday = utahactivecases.jul10;
+              var utahyesterday = utahcasebank.jul12;
+       var utahdeathsyesterday = utahdeathbank.jul12;
+           var usdeathsyesterday = usdeathbank.jul12;
+         var deathsyesterday = globaldeathbank.jul12;
+           var yesterdaytotal = globalcasebank.jul12;
+                    var yesterday = uscasebank.jul12;
+      var gactivecasesyesterday = gactivecases.jul12;
+    var usactivecasesyesterday = usactivecases.jul12;
+var utahactivecasesyesterday = utahactivecases.jul12;
 
-       var utahdeathstoday = utahdeathbank.jul11;
-              var utahtoday = utahcasebank.jul11;
-           var usdeathstoday = usdeathbank.jul11;
-         var deathstoday = globaldeathbank.jul11;
-           var todaytotal = globalcasebank.jul11;
-                    var today = uscasebank.jul11;
-var utahactivecasestoday = utahactivecases.jul11;
-    var usactivecasestoday = usactivecases.jul11;
-      var gactivecasestoday = gactivecases.jul11;
+       var utahdeathstoday = utahdeathbank.jul13;
+              var utahtoday = utahcasebank.jul13;
+           var usdeathstoday = usdeathbank.jul13;
+         var deathstoday = globaldeathbank.jul13;
+           var todaytotal = globalcasebank.jul13;
+                    var today = uscasebank.jul13;
+var utahactivecasestoday = utahactivecases.jul13;
+    var usactivecasestoday = usactivecases.jul13;
+      var gactivecasestoday = gactivecases.jul13;
 
-        var gcasesoneweekago = globalcasebank.jul04;
-     var utahdeathsoneweekago = utahdeathbank.jul04;
-           var uscasesoneweekago = uscasebank.jul04;
-       var utahcasesoneweekago = utahcasebank.jul04;
-      var gdeathsoneweekago = globaldeathbank.jul04;
-         var usdeathsoneweekago = usdeathbank.jul04;
-var utahactivecaseslastweek = utahactivecases.jul04;
-    var usactivecaseslastweek = usactivecases.jul04;
-      var gactivecaseslastweek = gactivecases.jul04;
+        var gcasesoneweekago = globalcasebank.jul06;
+     var utahdeathsoneweekago = utahdeathbank.jul06;
+           var uscasesoneweekago = uscasebank.jul06;
+       var utahcasesoneweekago = utahcasebank.jul06;
+      var gdeathsoneweekago = globaldeathbank.jul06;
+         var usdeathsoneweekago = usdeathbank.jul06;
+var utahactivecaseslastweek = utahactivecases.jul06;
+    var usactivecaseslastweek = usactivecases.jul06;
+      var gactivecaseslastweek = gactivecases.jul06;
 
-   var gcasestwoweeksago = globalcasebank.jun27;
-    var usdeathstwoweeksago = usdeathbank.jun27;
-  var utahcasestwoweeksago = utahcasebank.jun27;
- var gdeathstwoweeksago = globaldeathbank.jun27;
-      var uscasestwoweeksago = uscasebank.jun27;
-var utahdeathstwoweeksago = utahdeathbank.jun27;
+   var gcasestwoweeksago = globalcasebank.jun29;
+    var usdeathstwoweeksago = usdeathbank.jun29;
+  var utahcasestwoweeksago = utahcasebank.jun29;
+ var gdeathstwoweeksago = globaldeathbank.jun29;
+      var uscasestwoweeksago = uscasebank.jun29;
+var utahdeathstwoweeksago = utahdeathbank.jun29;
 
-      var uscasesthreeweeksago = uscasebank.jun20;
-  var gdeathsthreeweekago = globaldeathbank.jun20;
-  var utahcasesthreeweeksago = utahcasebank.jun20;
-    var usdeathsthreeweeksago = usdeathbank.jun20;
-var utahdeathsthreeweeksago = utahdeathbank.jun20;
-   var gcasesthreeweeksago = globalcasebank.jun20;
+      var uscasesthreeweeksago = uscasebank.jun22;
+  var gdeathsthreeweekago = globaldeathbank.jun22;
+  var utahcasesthreeweeksago = utahcasebank.jun22;
+    var usdeathsthreeweeksago = usdeathbank.jun22;
+var utahdeathsthreeweeksago = utahdeathbank.jun22;
+   var gcasesthreeweeksago = globalcasebank.jun22;
 
 var glastweekchange = todaytotal - gcasesoneweekago;
 var uslastweekchange = today - uscasesoneweekago;
@@ -1199,7 +1233,9 @@ var dataLabelsBig = [
   "July 8",
   "July 9",
   "July 10",
-  "July 11"
+  "July 11",
+  "July 12",
+  "July 13"
 ];
 
 var ctx = document.getElementById("myChart").getContext("2d");
@@ -1209,115 +1245,7 @@ var stackedLine = new Chart(ctx, {
 
   // The data for our dataset
   data: {
-    labels: [
-      "March 25",
-      "March 26",
-      "March 27",
-      "March 28",
-      "March 29",
-      "March 30",
-      "March 31",
-      "April 1",
-      "April 2",
-      "April 3",
-      "April 4",
-      "April 5",
-      "April 6",
-      "April 7",
-      "April 8",
-      "April 9",
-      "April 10",
-      "April 11",
-      "April 12",
-      "April 13",
-      "April 14",
-      "April 15",
-      "April 16",
-      "April 17",
-      "April 18",
-      "April 19",
-      "April 20",
-      "April 21",
-      "April 22",
-      "April 23",
-      "April 24",
-      "April 25",
-      "April 26",
-      "April 27",
-      "April 28",
-      "April 29",
-      "April 30",
-      "May 1",
-      "May 2",
-      "May 3",
-      "May 4",
-      "May 5",
-      "May 6",
-      "May 7",
-      "May 8",
-      "May 9",
-      "May 10",
-      "May 11",
-      "May 12",
-      "May 13",
-      "May 14",
-      "May 15",
-      "May 16",
-      "May 17",
-      "May 18",
-      "May 19",
-      "May 20",
-      "May 21",
-      "May 22",
-      "May 23",
-      "May 24",
-      "May 25",
-      "May 26",
-      "May 27",
-      "May 28",
-      "May 29",
-      "May 30",
-      "May 31",
-      "June 1",
-      "June 2",
-      "June 3",
-      "June 4",
-      "June 5",
-      "June 6",
-      "June 7",
-      "June 8",
-      "June 9",
-      "June 10",
-      "June 11",
-      "June 12",
-      "June 13",
-      "June 14",
-      "June 15",
-      "June 16",
-      "June 17",
-      "June 18",
-      "June 19",
-      "June 20",
-      "June 21",
-      "June 22",
-      "June 23",
-      "June 24",
-      "June 25",
-      "June 26",
-      "June 27",
-      "June 28",
-      "June 29",
-      "June 30",
-      "July 1",
-      "July 2",
-      "July 3",
-      "July 4",
-      "July 5",
-      "July 6",
-      "July 7",
-      "July 8",
-      "July 9"
-    ],
+    labels: dataLabelsBig,
     datasets: [
       {
         label: "Global Deaths",
@@ -3211,7 +3139,10 @@ var dateLabels = [
   "June 23",
   "June 24",
   "June 25",
-  "June 26"
+  "June 26",
+  "June 27",
+  "June 28",
+  "June 29"
 ];
 var ctx7 = document.getElementById("myChart7").getContext("2d");
 var uschart = new Chart(ctx7, {
@@ -3321,8 +3252,19 @@ var uschart = new Chart(ctx7, {
           gcaserank[153],
           gcaserank[154],
           gcaserank[155],
+          gcaserank[156],
+          gcaserank[157],
+          gcaserank[158],
+          gcaserank[159],
     
         ],
+      },
+      {
+        label: "7 day moving average",
+        borderColor: "rgb(8, 8, 8)",
+        order: 1,
+
+        data: gcaserankavg,
       },
     ],
   },
@@ -3446,8 +3388,19 @@ var uschart = new Chart(ctx8, {
           uscaserank[153],
           uscaserank[154],
           uscaserank[155],
+          uscaserank[156],
+          uscaserank[157],
+          uscaserank[158],
+          uscaserank[159]
     
         ],
+      },
+      {
+        label: "7 day moving average",
+        borderColor: "rgb(8, 8, 8)",
+        order: 1,
+
+        data: uscaserankavg,
       },
     ],
   },
@@ -3573,8 +3526,19 @@ var utahchart = new Chart(ctx9, {
           utahcaserank[153],
           utahcaserank[154],
           utahcaserank[155],
+          utahcaserank[156],
+          utahcaserank[157],
+          utahcaserank[158],
+          utahcaserank[159],
     
         ],
+      },
+      {
+        label: "7 day moving average",
+        borderColor: "rgb(8, 8, 8)",
+        order: 1,
+
+        data: utahcaserankavg,
       },
     ],
   },
