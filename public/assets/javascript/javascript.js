@@ -12,7 +12,6 @@ var usdeathbank = {};
 var utahcasebank = {};
 var utahdeathbank = {};
 
-
 var gcaserank = [];
 var uscaserank = [];
 var utahcaserank = [];
@@ -23,7 +22,7 @@ utahcountycasebank = {
 };
 
 function createObjects() {
-  for (var i = 0; i < 174; i++) {
+  for (var i = 0; i < 175; i++) {
     if (i < 10) {
       var date = "jan" + (22 + i);
       dates.push(date);
@@ -1069,68 +1068,62 @@ var utahcountyactivecases = {
   may30: utahcountycasebank.may30 - utahcountyrecovered.may30,
 };
 
-          var twodaysago = uscasebank.jul11;
-var twodaysagoglobal = globalcasebank.jul11;
-      var deathstwo = globaldeathbank.jul11;
-        var usdeathstwo = usdeathbank.jul11;
-    var utahdeathstwo = utahdeathbank.jul11;
-    var utahtwodaysago = utahcasebank.jul11;
+          var twodaysago = uscasebank.jul12;
+var twodaysagoglobal = globalcasebank.jul12;
+      var deathstwo = globaldeathbank.jul12;
+        var usdeathstwo = usdeathbank.jul12;
+    var utahdeathstwo = utahdeathbank.jul12;
+    var utahtwodaysago = utahcasebank.jul12;
 
-              var utahyesterday = utahcasebank.jul12;
-       var utahdeathsyesterday = utahdeathbank.jul12;
-           var usdeathsyesterday = usdeathbank.jul12;
-         var deathsyesterday = globaldeathbank.jul12;
-           var yesterdaytotal = globalcasebank.jul12;
-                    var yesterday = uscasebank.jul12;
-      var gactivecasesyesterday = gactivecases.jul12;
-    var usactivecasesyesterday = usactivecases.jul12;
-var utahactivecasesyesterday = utahactivecases.jul12;
+              var utahyesterday = utahcasebank.jul13;
+       var utahdeathsyesterday = utahdeathbank.jul13;
+           var usdeathsyesterday = usdeathbank.jul13;
+         var deathsyesterday = globaldeathbank.jul13;
+           var yesterdaytotal = globalcasebank.jul13;
+                    var yesterday = uscasebank.jul13;
+      var gactivecasesyesterday = gactivecases.jul13;
+    var usactivecasesyesterday = usactivecases.jul13;
+var utahactivecasesyesterday = utahactivecases.jul13;
 
-       var utahdeathstoday = utahdeathbank.jul13;
-              var utahtoday = utahcasebank.jul13;
-           var usdeathstoday = usdeathbank.jul13;
-         var deathstoday = globaldeathbank.jul13;
-           var todaytotal = globalcasebank.jul13;
-                    var today = uscasebank.jul13;
-var utahactivecasestoday = utahactivecases.jul13;
-    var usactivecasestoday = usactivecases.jul13;
-      var gactivecasestoday = gactivecases.jul13;
+       var utahdeathstoday = utahdeathbank.jul14;
+              var utahtoday = utahcasebank.jul14;
+           var usdeathstoday = usdeathbank.jul14;
+         var deathstoday = globaldeathbank.jul14;
+           var todaytotal = globalcasebank.jul14;
+                    var today = uscasebank.jul14;
+var utahactivecasestoday = utahactivecases.jul14;
+    var usactivecasestoday = usactivecases.jul14;
+      var gactivecasestoday = gactivecases.jul14;
 
-        var gcasesoneweekago = globalcasebank.jul06;
-     var utahdeathsoneweekago = utahdeathbank.jul06;
-           var uscasesoneweekago = uscasebank.jul06;
-       var utahcasesoneweekago = utahcasebank.jul06;
-      var gdeathsoneweekago = globaldeathbank.jul06;
-         var usdeathsoneweekago = usdeathbank.jul06;
-var utahactivecaseslastweek = utahactivecases.jul06;
-    var usactivecaseslastweek = usactivecases.jul06;
-      var gactivecaseslastweek = gactivecases.jul06;
+        var gcasesoneweekago = globalcasebank.jul07;
+     var utahdeathsoneweekago = utahdeathbank.jul07;
+           var uscasesoneweekago = uscasebank.jul07;
+       var utahcasesoneweekago = utahcasebank.jul07;
+      var gdeathsoneweekago = globaldeathbank.jul07;
+         var usdeathsoneweekago = usdeathbank.jul07;
+var utahactivecaseslastweek = utahactivecases.jul07;
+    var usactivecaseslastweek = usactivecases.jul07;
+      var gactivecaseslastweek = gactivecases.jul07;
 
-   var gcasestwoweeksago = globalcasebank.jun29;
-    var usdeathstwoweeksago = usdeathbank.jun29;
-  var utahcasestwoweeksago = utahcasebank.jun29;
- var gdeathstwoweeksago = globaldeathbank.jun29;
-      var uscasestwoweeksago = uscasebank.jun29;
-var utahdeathstwoweeksago = utahdeathbank.jun29;
+   var gcasestwoweeksago = globalcasebank.jun30;
+    var usdeathstwoweeksago = usdeathbank.jun30;
+  var utahcasestwoweeksago = utahcasebank.jun30;
+ var gdeathstwoweeksago = globaldeathbank.jun30;
+      var uscasestwoweeksago = uscasebank.jun30;
+var utahdeathstwoweeksago = utahdeathbank.jun30;
 
-      var uscasesthreeweeksago = uscasebank.jun22;
-  var gdeathsthreeweekago = globaldeathbank.jun22;
-  var utahcasesthreeweeksago = utahcasebank.jun22;
-    var usdeathsthreeweeksago = usdeathbank.jun22;
-var utahdeathsthreeweeksago = utahdeathbank.jun22;
-   var gcasesthreeweeksago = globalcasebank.jun22;
+      var uscasesthreeweeksago = uscasebank.jun23;
+  var gdeathsthreeweekago = globaldeathbank.jun23;
+  var utahcasesthreeweeksago = utahcasebank.jun23;
+    var usdeathsthreeweeksago = usdeathbank.jun23;
+var utahdeathsthreeweeksago = utahdeathbank.jun23;
+   var gcasesthreeweeksago = globalcasebank.jun23;
 
 var glastweekchange = todaytotal - gcasesoneweekago;
 var uslastweekchange = today - uscasesoneweekago;
 var utahlastweekchange = utahtoday - utahcasesoneweekago;
 
 var dataLabelsBig = [
-  "March 25",
-  "March 26",
-  "March 27",
-  "March 28",
-  "March 29",
-  "March 30",
   "March 31",
   "April 1",
   "April 2",
@@ -1235,7 +1228,8 @@ var dataLabelsBig = [
   "July 10",
   "July 11",
   "July 12",
-  "July 13"
+  "July 13",
+  "July 14"
 ];
 
 var ctx = document.getElementById("myChart").getContext("2d");
@@ -1255,12 +1249,6 @@ var stackedLine = new Chart(ctx, {
         poointHoverBackgroundColor: "rgb(255, 99, 132)",
 
         data: [
-          globaldeathbank.mar25,
-          globaldeathbank.mar26,
-          globaldeathbank.mar27,
-          globaldeathbank.mar28,
-          globaldeathbank.mar29,
-          globaldeathbank.mar30,
           globaldeathbank.mar31,
           globaldeathbank.apr01,
           globaldeathbank.apr02,
@@ -2019,12 +2007,6 @@ var newchart = new Chart(ctx4, {
         order: 1,
         stacked: true,
         data: [
-          usdeathbank.mar25,
-          usdeathbank.mar26,
-          usdeathbank.mar27,
-          usdeathbank.mar28,
-          usdeathbank.mar29,
-          usdeathbank.mar30,
           usdeathbank.mar31,
           usdeathbank.apr01,
           usdeathbank.apr02,
@@ -2158,12 +2140,6 @@ var newchart = new Chart(ctx4, {
         stacked: true,
         order: 1,
         data: [
-          usactivecases.mar25,
-          usactivecases.mar26,
-          usactivecases.mar27,
-          usactivecases.mar28,
-          usactivecases.mar29,
-          usactivecases.mar30,
           usactivecases.mar31,
           usactivecases.apr01,
           usactivecases.apr02,
@@ -2298,12 +2274,6 @@ var newchart = new Chart(ctx4, {
         stacked: true,
 
         data: [
-          usrecovered.mar25,
-          usrecovered.mar26,
-          usrecovered.mar27,
-          usrecovered.mar28,
-          usrecovered.mar29,
-          usrecovered.mar30,
           usrecovered.mar31,
           usrecovered.apr01,
           usrecovered.apr02,
@@ -2459,12 +2429,6 @@ var uschart = new Chart(ctx5, {
         order: 1,
 
         data: [
-          utahdeathbank.mar25,
-          utahdeathbank.mar26,
-          utahdeathbank.mar27,
-          utahdeathbank.mar28,
-          utahdeathbank.mar29,
-          utahdeathbank.mar30,
           utahdeathbank.mar31,
           utahdeathbank.apr01,
           utahdeathbank.apr02,
@@ -2621,12 +2585,6 @@ var newchart = new Chart(ctx6, {
         order: 1,
         stacked: true,
         data: [
-          utahdeathbank.mar25,
-          utahdeathbank.mar26,
-          utahdeathbank.mar27,
-          utahdeathbank.mar28,
-          utahdeathbank.mar29,
-          utahdeathbank.mar30,
           utahdeathbank.mar31,
           utahdeathbank.apr01,
           utahdeathbank.apr02,
@@ -2760,12 +2718,6 @@ var newchart = new Chart(ctx6, {
         stacked: true,
         order: 1,
         data: [
-          utahactivecases.mar25,
-          utahactivecases.mar26,
-          utahactivecases.mar27,
-          utahactivecases.mar28,
-          utahactivecases.mar29,
-          utahactivecases.mar30,
           utahactivecases.mar31,
           utahactivecases.apr01,
           utahactivecases.apr02,
@@ -2900,12 +2852,6 @@ var newchart = new Chart(ctx6, {
         stacked: true,
 
         data: [
-          utahrecovered.mar25,
-          utahrecovered.mar26,
-          utahrecovered.mar27,
-          utahrecovered.mar28,
-          utahrecovered.mar29,
-          utahrecovered.mar30,
           utahrecovered.mar31,
           utahrecovered.apr01,
           utahrecovered.apr02,
@@ -3142,7 +3088,8 @@ var dateLabels = [
   "June 26",
   "June 27",
   "June 28",
-  "June 29"
+  "June 29",
+  "June 30"
 ];
 var ctx7 = document.getElementById("myChart7").getContext("2d");
 var uschart = new Chart(ctx7, {
@@ -3256,6 +3203,7 @@ var uschart = new Chart(ctx7, {
           gcaserank[157],
           gcaserank[158],
           gcaserank[159],
+          gcaserank[160],
     
         ],
       },
@@ -3391,7 +3339,8 @@ var uschart = new Chart(ctx8, {
           uscaserank[156],
           uscaserank[157],
           uscaserank[158],
-          uscaserank[159]
+          uscaserank[159],
+          uscaserank[160]
     
         ],
       },
@@ -3530,6 +3479,7 @@ var utahchart = new Chart(ctx9, {
           utahcaserank[157],
           utahcaserank[158],
           utahcaserank[159],
+          utahcaserank[160],
     
         ],
       },
