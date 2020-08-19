@@ -18,7 +18,6 @@ var usactivecases = {};
 var utahrecovered = {};
 var utahactivecases = {};
 var todayDate = globalstuffs.length;
-
 var gcaserank = [];
 var uscaserank = [];
 var utahcaserank = [];
@@ -42,7 +41,7 @@ utahcountycasebank = {
 };
 
 function createObjects() {
-  for (var i = 0; i < 209; i++) {
+  for (var i = 0; i < globalstuffs.length; i++) {
     if (i < 10) {
       var date = "jan" + (22 + i);
       dates.push(date);
