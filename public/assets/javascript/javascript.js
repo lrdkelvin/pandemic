@@ -87,6 +87,12 @@ function createObjects() {
     } else if (i < 223) {
       var date = "aug" + (i - 191);
       dates.push(date);
+    } else if (i < 232) {
+      var date = "sep0" + (i - 222);
+      dates.push(date);
+    } else if (i < 254) {
+      var date = "sep" + (i - 222);
+      dates.push(date);
     }
   }
 }
@@ -387,11 +393,17 @@ var utahdeathstwoweeksago = utahdeaths[todayDate - 15];
 var utahdeathsthreeweeksago = utahdeaths[todayDate - 22];
    var gcasesthreeweeksago = globalstuffs[todayDate - 22];
 
+   var gTotalAverage = Math.round((deathstoday / gcasestwoweeksago) * 10000) /100;
+   var usTotalAverage = Math.round((usdeathstoday / uscasestwoweeksago) * 10000) /100;
+   var utahTotalAverage = Math.round((utahdeathstoday / utahcasestwoweeksago) * 10000) /100;
 var glastweekchange = todaytotal - gcasesoneweekago;
 var uslastweekchange = today - uscasesoneweekago;
 var utahlastweekchange = utahtoday - utahcasesoneweekago;
 var dataLabelsBig = [];
 var dateLabels = [];
+var gTotalAverageData  = [];
+var usTotalAverageData  = [];
+var utahTotalAverageData  = [];
 
 
 for (var i = 0; i<gcaserank.length -69; i++) {
@@ -413,6 +425,13 @@ for (var i = 0; i<gcaserank.length -69; i++) {
   else if (i< 154) {
     dataLabelsBig.push("August " + (i -122))
   }
+  else if (i< 154) {
+    dataLabelsBig.push("September " + (i -153))
+  }
+gTotalAverageData.push(gTotalAverage);
+usTotalAverageData.push(usTotalAverage);
+utahTotalAverageData.push(utahTotalAverage);
+
 }
 
 for (var i = 0; i<gcaserank.length -76; i++) {
@@ -434,7 +453,11 @@ for (var i = 0; i<gcaserank.length -76; i++) {
   else if (i< 160) {
     dateLabels.push("August " + (i -128))
   }
+  else if (i< 191) {
+    dateLabels.push("September " + (i -159))
+  }
 }
+$("#date").html("Updated " + dataLabelsBig[dataLabelsBig.length -1])
 console.log(dateLabels);
 
 
@@ -717,6 +740,13 @@ var uschart = new Chart(ctx7, {
 
         data: gcaserankavg,
       },
+      {
+        label: "ESTIMATE: death rate so far (how many CONFIRMED tests so far have resulted in death?)",
+        borderColor: "rgb(225, 225, 0)",
+        order: 1,
+
+        data: gTotalAverageData,
+      },
     ],
   },
 
@@ -753,6 +783,13 @@ var uschart = new Chart(ctx8, {
         order: 1,
 
         data: uscaserankavg,
+      },
+      {
+        label: "ESTIMATE: death rate so far (how many CONFIRMED tests so far have resulted in death?)",
+        borderColor: "rgb(225, 225, 0)",
+        order: 1,
+
+        data: usTotalAverageData,
       },
     ],
   },
@@ -793,6 +830,13 @@ var utahchart = new Chart(ctx9, {
         order: 1,
 
         data: utahcaserankavg,
+      },
+      {
+        label: "ESTIMATE: death rate so far (how many CONFIRMED tests so far have resulted in death?)",
+        borderColor: "rgb(225, 225, 0)",
+        order: 1,
+
+        data: utahTotalAverageData,
       },
     ],
   },
