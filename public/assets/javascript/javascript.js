@@ -425,7 +425,7 @@ for (var i = 0; i<gcaserank.length -69; i++) {
   else if (i< 154) {
     dataLabelsBig.push("August " + (i -122))
   }
-  else if (i< 154) {
+  else if (i< 185) {
     dataLabelsBig.push("September " + (i -153))
   }
 gTotalAverageData.push(gTotalAverage);
