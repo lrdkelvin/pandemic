@@ -90,13 +90,25 @@ function createObjects() {
     } else if (i < 232) {
       var date = "sep0" + (i - 222);
       dates.push(date);
-    } else if (i < 254) {
+    } else if (i < 253) {
       var date = "sep" + (i - 222);
+      dates.push(date);
+    } else if (i < 262) {
+      var date = "oct0" + (i - 252);
+      dates.push(date);
+    } else if (i < 284) {
+      var date = "oct" + (i - 252);
+      dates.push(date);
+    } else if (i < 305) {
+      var date = "nov0" + (i - 283);
+      dates.push(date);
+    } else if (i < 315) {
+      var date = "nov" + (i - 283);
       dates.push(date);
     }
   }
 }
-
+/*
 createObjects();
 dates.forEach((key, idx) => (globalcasebank[key] = globalstuffs[idx]));
 dates.forEach((key, idx) => (globaldeathbank[key] = deathsStuffs[idx]));
@@ -110,7 +122,7 @@ dates.forEach((key, idx) => (usrecovered[key] = (uscases[idx - 14] - usdeaths[id
 dates.forEach((key, idx) => (usactivecases[key] = (uscases[idx] - (usdeaths[idx] + (uscases[idx -14] - usdeaths[idx])))));
 dates.forEach((key, idx) => (utahrecovered[key] = (utahcases[idx - 14] - utahdeaths[idx])));
 dates.forEach((key, idx) => (utahactivecases[key] = (utahcases[idx] - (utahdeaths[idx] + (utahcases[idx -14] - utahdeaths[idx])))));
-
+*/
 
 for (var i = 0; i < globalstuffs.length - 69; i++) {
   gCasesData.push(globalstuffs[i + 69]);
@@ -127,9 +139,6 @@ for (var i = 0; i < globalstuffs.length - 69; i++) {
   utahRecoveredData.push((utahcases[i + 55] - utahdeaths[i + 69]));
 
 }
-console.log("us recovered is ");
-console.log("----------");
-console.log(usrecovered)
 
 function gcasecreate() {
   for (var i=0; i < (gdailycases.length); i++) {
@@ -145,11 +154,8 @@ function gcasecreate() {
     utahcaserank.push(newDate);
   }
 }
-gcasecreate();
-console.log(utahcasebank);
-console.log(utahdeathbank);
 console.log(globalcasebank);
-console.log(uscaserank);
+gcasecreate();
 var globalcaseprediction = 3308945;
 var uscasesprediction = 1096002;
 var utahcaseprediction = 4705;
@@ -161,14 +167,6 @@ var gcaserankavg = [];
 var uscaserankavg = [];
 var utahcaserankavg = [];
 
-console.log("global case bank");
-console.log("-----------");
-console.log(globalcasebank);
-console.log("global death bank" + globaldeathbank);
-console.log("us case bank" + uscasebank);
-console.log("us death bank" + usdeathbank);
-console.log("utah case bank" + utahcasebank);
-console.log("utah death bank" + utahdeathbank);
 for (var x = 0; x<(gcaserank.length - 62); x++) {
   var average = (gcaserank[x+56] +
   gcaserank[x+57] +
@@ -425,8 +423,14 @@ for (var i = 0; i<gcaserank.length -69; i++) {
   else if (i< 154) {
     dataLabelsBig.push("August " + (i -122))
   }
-  else if (i< 185) {
+  else if (i< 184) {
     dataLabelsBig.push("September " + (i -153))
+  }
+  else if (i< 215) {
+    dataLabelsBig.push("October " + (i -183))
+  }
+  else if (i< 246) {
+    dataLabelsBig.push("November " + (i -214))
   }
 gTotalAverageData.push(gTotalAverage);
 usTotalAverageData.push(usTotalAverage);
@@ -453,12 +457,18 @@ for (var i = 0; i<gcaserank.length -76; i++) {
   else if (i< 160) {
     dateLabels.push("August " + (i -128))
   }
-  else if (i< 191) {
+  else if (i< 190) {
     dateLabels.push("September " + (i -159))
   }
+  else if (i< 220) {
+    dateLabels.push("October " + (i -189))
+  }
+  else if (i< 251) {
+    dateLabels.push("November " + (i -220))
+  }
 }
+console.log(dateLabels)
 $("#date").html("Updated " + dataLabelsBig[dataLabelsBig.length -1])
-console.log(dateLabels);
 
 
 var ctx = document.getElementById("myChart").getContext("2d");
