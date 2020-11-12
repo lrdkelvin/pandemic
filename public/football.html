@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CFP Predictor</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" type="width-device-width, initial-scale=1.0">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Permanent+Marker&display=swap"
+    rel="stylesheet">
+  <style>
+    .primary1 {
+      background-color: #003366;
+      font-family: 'Nothing You Could Do', cursive;
+      background-image: url("assets/images/disease.jpg");
+      color: #E30612;
+    }
+
+    ;
+  </style>
+
+
+</head>
+<body>
+ 
+  <header class="display-4 jumbotron jumbotron-fluid primary1 text-center"> College Football Playoff Predictor</header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Pandemic Predictor</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="football.html">Playoff Predictor<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="jumbotron jumbotron-fluid">
+    
+
+    <h2>Clemson</h2>
+      <label><input type="radio" name="option" value="Win">Win</label>
+      <label><input type="radio" name="option" value="Loss">Loss</label>
+
+      <div>
+        Car: <input id="chkVehicleCar" name="chkVehicle" type="checkbox" value="Car" class="radiocheckbox">
+        Moto: <input id="chkVehicleMoto" name="chkVehicle" type="checkbox" value="Moto" class="radiocheckbox">
+        Byke: <input id="chkVehicleByke" name="chkVehicle" type="checkbox" value="Byke" class="radiocheckbox">
+        Feet: <input id="chkVehicleFeet" name="chkVehicle" type="checkbox" value="Feet">
+    </div>
+
+      <span>    
+        Red: <input id="chkColorRed" name="chkColor" type="checkbox" value="Red" class="radiocheckbox">
+        Blue: <input id="chkColorBlue" name="chkColor" type="checkbox" value="Blue" class="radiocheckbox">
+        Green: <input id="chkColorGreen" name="chkColor" type="checkbox" value="Green" class="radiocheckbox">
+    
+        Mango: <input id="chkFruitMango" name="chkFruit" type="checkbox" value="Mango" class="radiocheckbox">
+        Orange: <input id="chkFruitOrange" name="chkFruit" type="checkbox" value="Orange" class="radiocheckbox">
+        Banana: <input id="chkFruitBanana" name="chkFruit" type="checkbox" value="Banana" class="radiocheckbox">
+    </span>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript" src="assets/javascript/scraped.js"></script>
+    <script type="text/javascript" src="assets/javascript/javascript.js"></script>
+    <script type="text/javascript" src="assets/javascript/football.js"></script>
+    
+</body>
+
+
+</html>

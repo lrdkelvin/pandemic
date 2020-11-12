@@ -19,18 +19,17 @@ const run = async () => {
             const Utahdom = new JSDOM(UTAH.body);
             const USdom = new JSDOM(US.body);
             const dom = new JSDOM(global.body);
-            globalDeathsScript = dom.window.document.scripts[22].text;
-            globalCasesScript = dom.window.document.scripts[21].text;
-            usDeathsScript = USdom.window.document.scripts[26].text;
-            usDeathsScriptDay = USdom.window.document.scripts[27].text;
-            usCasesScript = USdom.window.document.scripts[24].text;
-            usCasesScript2 = USdom.window.document.scripts[23].text;
+            globalDeathsScript = dom.window.document.scripts[21].text;
+            globalCasesScript = dom.window.document.scripts[20].text;
+            usDeathsScript = USdom.window.document.scripts[25].text;
+            usDeathsScriptDay = USdom.window.document.scripts[26].text;
+            usCasesScript = USdom.window.document.scripts[23].text;
+            usCasesScript2 = USdom.window.document.scripts[22].text;
 
-            utahDeathsScript = Utahdom.window.document.scripts[24].text;
-            utahDeathsScriptDay = Utahdom.window.document.scripts[25].text;
-            utahCasesScript = Utahdom.window.document.scripts[21].text;
-            utahCasesScriptDay = Utahdom.window.document.scripts[22].text;
-            console.log(utahDeathsScriptDay);
+            utahDeathsScript = Utahdom.window.document.scripts[23].text;
+            utahDeathsScriptDay = Utahdom.window.document.scripts[24].text;
+            utahCasesScript = Utahdom.window.document.scripts[20].text;
+            utahCasesScriptDay = Utahdom.window.document.scripts[21].text;
         
 
             gDailyDeathFind = globalDeathsScript.indexOf("data", (globalDeathsScript.indexOf("data") +1));
@@ -59,14 +58,14 @@ const run = async () => {
             (globalCasesScript.indexOf("]", globalCasesScript.indexOf("data")) +1 ));
             
 
-
-
             var scrapedUsDeaths = usDeathsScript.slice((usDeathsScript.indexOf("data") + 7), 
             (usDeathsScript.indexOf("]", usDeathsScript.indexOf("data")) +1 ));
+            console.log("death total is" +scrapedUsDeaths);
             //success
 
             var scrapedUsDeathsDay = usDeathsScriptDay.slice((usDeathsScriptDay.indexOf("data") + 7), 
             (usDeathsScriptDay.indexOf("]", usDeathsScriptDay.indexOf("data")) +1 ));
+            console.log("deaths per day is" + scrapedUsDeathsDay) 
             //success
 
             var scrapedUsCasesDay = usCasesScript.slice((usCasesScript.indexOf("data") + 7), 
@@ -76,8 +75,6 @@ const run = async () => {
             var scrapedUsCases = usCasesScript2.slice((usCasesScript2.indexOf("data") + 7), 
             (usCasesScript2.indexOf("]", usCasesScript2.indexOf("data")) +1 ));
             //success
-
-
 
             var scrapedUtahDeaths = utahDeathsScript.slice((utahDeathsScript.indexOf("data") + 7), 
             (utahDeathsScript.indexOf("]", utahDeathsScript.indexOf("data")) +1 ));

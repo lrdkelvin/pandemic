@@ -1,4 +1,5 @@
-
+$(document).ready(function() {
+ 
 var dates = [];
 var globaldeathdates = [];
 var uscasedates = [];
@@ -1143,3 +1144,4 @@ if (utahactivecasestoday - utahactivecaseslastweek < 0) {
     "+" + (utahactivecasestoday - utahactivecaseslastweek).toLocaleString()
   );
 }
+});
