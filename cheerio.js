@@ -19,17 +19,17 @@ const run = async () => {
             const Utahdom = new JSDOM(UTAH.body);
             const USdom = new JSDOM(US.body);
             const dom = new JSDOM(global.body);
-            globalDeathsScript = dom.window.document.scripts[21].text;
-            globalCasesScript = dom.window.document.scripts[20].text;
-            usDeathsScript = USdom.window.document.scripts[25].text;
-            usDeathsScriptDay = USdom.window.document.scripts[26].text;
-            usCasesScript = USdom.window.document.scripts[23].text;
-            usCasesScript2 = USdom.window.document.scripts[22].text;
+            globalDeathsScript = dom.window.document.scripts[22].text;
+            globalCasesScript = dom.window.document.scripts[21].text;
+            usDeathsScript = USdom.window.document.scripts[26].text;
+            usDeathsScriptDay = USdom.window.document.scripts[27].text;
+            usCasesScript = USdom.window.document.scripts[24].text;
+            usCasesScript2 = USdom.window.document.scripts[23].text;
 
-            utahDeathsScript = Utahdom.window.document.scripts[23].text;
-            utahDeathsScriptDay = Utahdom.window.document.scripts[24].text;
-            utahCasesScript = Utahdom.window.document.scripts[20].text;
-            utahCasesScriptDay = Utahdom.window.document.scripts[21].text;
+            utahDeathsScript = Utahdom.window.document.scripts[24].text;
+            utahDeathsScriptDay = Utahdom.window.document.scripts[25].text;
+            utahCasesScript = Utahdom.window.document.scripts[21].text;
+            utahCasesScriptDay = Utahdom.window.document.scripts[22].text;
         
 
             gDailyDeathFind = globalDeathsScript.indexOf("data", (globalDeathsScript.indexOf("data") +1));
