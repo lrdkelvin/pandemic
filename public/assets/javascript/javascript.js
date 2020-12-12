@@ -430,8 +430,11 @@ for (var i = 0; i<gcaserank.length -69; i++) {
   else if (i< 215) {
     dataLabelsBig.push("October " + (i -183))
   }
-  else if (i< 246) {
+  else if (i< 245) {
     dataLabelsBig.push("November " + (i -214))
+  }
+  else if (i< 276) {
+    dataLabelsBig.push("December  " + (i -244))
   }
 gTotalAverageData.push(gTotalAverage);
 usTotalAverageData.push(usTotalAverage);
@@ -461,11 +464,14 @@ for (var i = 0; i<gcaserank.length -76; i++) {
   else if (i< 190) {
     dateLabels.push("September " + (i -159))
   }
-  else if (i< 220) {
+  else if (i< 221) {
     dateLabels.push("October " + (i -189))
   }
   else if (i< 251) {
     dateLabels.push("November " + (i -220))
+  }
+  else if (i< 281) {
+    dateLabels.push("December " + (i -250))
   }
 }
 console.log(dateLabels)
