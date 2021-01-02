@@ -436,6 +436,9 @@ for (var i = 0; i<gcaserank.length -69; i++) {
   else if (i< 276) {
     dataLabelsBig.push("December  " + (i -244))
   }
+  else if (i< 307) {
+    dataLabelsBig.push("January  " + (i -275))
+  }
 gTotalAverageData.push(gTotalAverage);
 usTotalAverageData.push(usTotalAverage);
 utahTotalAverageData.push(utahTotalAverage);
@@ -472,6 +475,9 @@ for (var i = 0; i<gcaserank.length -76; i++) {
   }
   else if (i< 281) {
     dateLabels.push("December " + (i -250))
+  }
+  else if (i< 312) {
+    dateLabels.push("January " + (i -281))
   }
 }
 console.log(dateLabels)
