@@ -439,8 +439,11 @@ for (var i = 0; i<gcaserank.length -69; i++) {
   else if (i< 307) {
     dataLabelsBig.push("January  " + (i -275))
   }
-  else if (i< 338) {
+  else if (i< 335) {
     dataLabelsBig.push("February " + (i -306))
+  }
+  else if (i< 366) {
+    dataLabelsBig.push("March " + (i -334))
   }
 gTotalAverageData.push(gTotalAverage);
 usTotalAverageData.push(usTotalAverage);
@@ -479,11 +482,14 @@ for (var i = 0; i<gcaserank.length -76; i++) {
   else if (i< 282) {
     dateLabels.push("December " + (i -250))
   }
-  else if (i< 312) {
+  else if (i< 313) {
     dateLabels.push("January " + (i -281))
   }
-  else if (i< 343) {
+  else if (i< 341) {
     dateLabels.push("February " + (i -312))
+  }
+  else if (i< 372) {
+    dateLabels.push("March " + (i -340))
   }
 }
 console.log(dateLabels)
