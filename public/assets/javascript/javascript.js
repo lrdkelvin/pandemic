@@ -140,6 +140,47 @@ for (var i = 0; i < globalstuffs.length - 69; i++) {
   utahRecoveredData.push((utahcases[i + 55] - utahdeaths[i + 69]));
 
 }
+var gMin = gActiveData[gActiveData.length  -1];
+var usMin = usActiveData[gActiveData.length  -1];
+var utahMin = utahActiveData[gActiveData.length  -1];
+var test = false;
+var ustest = false;
+var utahtest = false;
+
+gActiveData.slice().reverse().forEach(gFunction);
+function gFunction(value, index) {
+  if (value < gMin && test==false) {
+    console.log("lower AC found. should now stop");
+    test = true;
+    gMin = value;
+    console.log("index is " +index);
+  } else {
+    if  (test==false) {console.log("keep going world...")}
+  }}
+usActiveData.slice().reverse().forEach(value => {
+  if (value < usMin && ustest==false) {
+    console.log("index is ")
+    usMin = value
+    ustest = true
+    console.log("lower AC found. should now stop")
+  } {
+    if (ustest == false) {console.log("keep going US....")}
+  }
+})
+utahActiveData.slice().reverse().forEach(value => {
+  if (value < utahMin && utahtest==false) {
+    utahMin  = value;
+    utahtest = true
+    console.log("lower AC found. should now stop") 
+  } {
+    if (utahtest == false) {console.log("keep going utah...")}
+  }
+})
+console.log("globally, this is the least active cases since " + gMin);
+console.log("in  the US, this is the least active cases since " + usMin);
+console.log("In Utah, this is the least active cases since " + utahMin);
+var gIndex = gActiveData.lastIndexOf(gMin);
+console.log("index of gmin " + gIndex)
 
 function gcasecreate() {
   for (var i=0; i < (gdailycases.length); i++) {
@@ -155,15 +196,8 @@ function gcasecreate() {
     utahcaserank.push(newDate);
   }
 }
-console.log(globalcasebank);
 gcasecreate();
-var globalcaseprediction = 3308945;
-var uscasesprediction = 1096002;
-var utahcaseprediction = 4705;
 
-var globaldeathsprediction = 244428;
-var usdeathsprediction = 63970;
-var utahdeathsprediction = 46;
 var gcaserankavg = [];
 var uscaserankavg = [];
 var utahcaserankavg = [];
@@ -197,149 +231,6 @@ for (var x = 0; x<(gcaserank.length - 62); x++) {
       var utahavg = (Math.round(utahaverage * 100))/100;
       utahcaserankavg.push(utahavg);
 }
-
-
-
-
-var utahcountyrecovered = {
-  mar25: utahcountycasebank.mar11,
-  mar26: utahcountycasebank.mar12,
-  mar27: utahcountycasebank.mar13,
-  mar28: utahcountycasebank.mar14,
-  mar29: utahcountycasebank.mar15,
-  mar30: utahcountycasebank.mar16,
-  mar31: utahcountycasebank.mar17,
-  apr01: utahcountycasebank.mar18,
-  apr02: utahcountycasebank.mar19,
-  apr03: utahcountycasebank.mar20,
-  apr04: utahcountycasebank.mar21,
-  apr05: utahcountycasebank.mar22,
-  apr06: utahcountycasebank.mar23,
-  apr07: utahcountycasebank.mar24,
-  apr08: utahcountycasebank.mar25,
-  apr09: utahcountycasebank.mar26,
-  apr10: utahcountycasebank.mar27,
-  apr11: utahcountycasebank.mar28,
-  apr12: utahcountycasebank.mar29,
-  apr13: utahcountycasebank.mar30,
-  apr14: utahcountycasebank.mar31,
-  apr15: utahcountycasebank.apr01,
-  apr16: utahcountycasebank.apr02,
-  apr17: utahcountycasebank.apr03,
-  apr18: utahcountycasebank.apr04,
-  apr19: utahcountycasebank.apr05,
-  apr20: utahcountycasebank.apr06,
-  apr21: utahcountycasebank.apr07,
-  apr22: utahcountycasebank.apr08,
-  apr23: utahcountycasebank.apr09,
-  apr24: utahcountycasebank.apr10,
-  apr25: utahcountycasebank.apr11,
-  apr26: utahcountycasebank.apr12,
-  apr27: utahcountycasebank.apr13,
-  apr28: utahcountycasebank.apr14,
-  apr29: utahcountycasebank.apr15,
-  apr30: utahcountycasebank.apr16,
-  may01: utahcountycasebank.apr17,
-  may02: utahcountycasebank.apr18,
-  may03: utahcountycasebank.apr19,
-  may04: utahcountycasebank.apr20,
-  may05: utahcountycasebank.apr21,
-  may06: utahcountycasebank.apr22,
-  may07: utahcountycasebank.apr23,
-  may08: utahcountycasebank.apr24,
-  may09: utahcountycasebank.apr25,
-  may10: utahcountycasebank.apr26,
-  may11: utahcountycasebank.apr27,
-  may12: utahcountycasebank.apr28,
-  may13: utahcountycasebank.apr29,
-  may14: utahcountycasebank.apr30,
-  may15: utahcountycasebank.may01,
-  may16: utahcountycasebank.may02,
-  may17: utahcountycasebank.may03,
-  may18: utahcountycasebank.may04,
-  may19: utahcountycasebank.may05,
-  may20: utahcountycasebank.may06,
-  may21: utahcountycasebank.may07,
-  may22: utahcountycasebank.may08,
-  may23: utahcountycasebank.may09,
-  may24: utahcountycasebank.may10,
-  may25: utahcountycasebank.may11,
-  may26: utahcountycasebank.may12,
-  may27: utahcountycasebank.may13,
-  may28: utahcountycasebank.may14,
-  may29: utahcountycasebank.may15,
-  may30: utahcountycasebank.may16,
-};
-
-var utahcountyactivecases = {
-  mar25: utahcountycasebank.mar25 - utahcountyrecovered.mar25,
-  mar26: utahcountycasebank.mar26 - utahcountyrecovered.mar26,
-  mar27: utahcountycasebank.mar27 - utahcountyrecovered.mar27,
-  mar28: utahcountycasebank.mar28 - utahcountyrecovered.mar28,
-  mar29: utahcountycasebank.mar29 - utahcountyrecovered.mar29,
-  mar30: utahcountycasebank.mar30 - utahcountyrecovered.mar30,
-  mar31: utahcountycasebank.mar31 - utahcountyrecovered.mar31,
-  apr01: utahcountycasebank.apr01 - utahcountyrecovered.apr01,
-  apr02: utahcountycasebank.apr02 - utahcountyrecovered.apr02,
-  apr03: utahcountycasebank.apr03 - utahcountyrecovered.apr03,
-  apr04: utahcountycasebank.apr04 - utahcountyrecovered.apr04,
-  apr05: utahcountycasebank.apr05 - utahcountyrecovered.apr05,
-  apr06: utahcountycasebank.apr06 - utahcountyrecovered.apr06,
-  apr07: utahcountycasebank.apr07 - utahcountyrecovered.apr07,
-  apr08: utahcountycasebank.apr08 - utahcountyrecovered.apr08,
-  apr09: utahcountycasebank.apr09 - utahcountyrecovered.apr09,
-  apr10: utahcountycasebank.apr10 - utahcountyrecovered.apr10,
-  apr11: utahcountycasebank.apr11 - utahcountyrecovered.apr11,
-  apr12: utahcountycasebank.apr12 - utahcountyrecovered.apr12,
-  apr13: utahcountycasebank.apr13 - utahcountyrecovered.apr13,
-  apr14: utahcountycasebank.apr14 - utahcountyrecovered.apr14,
-  apr15: utahcountycasebank.apr15 - utahcountyrecovered.apr15,
-  apr16: utahcountycasebank.apr16 - utahcountyrecovered.apr16,
-  apr17: utahcountycasebank.apr17 - utahcountyrecovered.apr17,
-  apr18: utahcountycasebank.apr18 - utahcountyrecovered.apr18,
-  apr19: utahcountycasebank.apr19 - utahcountyrecovered.apr19,
-  apr20: utahcountycasebank.apr20 - utahcountyrecovered.apr20,
-  apr21: utahcountycasebank.apr21 - utahcountyrecovered.apr21,
-  apr22: utahcountycasebank.apr22 - utahcountyrecovered.apr22,
-  apr23: utahcountycasebank.apr23 - utahcountyrecovered.apr23,
-  apr24: utahcountycasebank.apr24 - utahcountyrecovered.apr24,
-  apr25: utahcountycasebank.apr25 - utahcountyrecovered.apr25,
-  apr26: utahcountycasebank.apr26 - utahcountyrecovered.apr26,
-  apr27: utahcountycasebank.apr27 - utahcountyrecovered.apr27,
-  apr28: utahcountycasebank.apr28 - utahcountyrecovered.apr28,
-  apr29: utahcountycasebank.apr29 - utahcountyrecovered.apr29,
-  apr30: utahcountycasebank.apr30 - utahcountyrecovered.apr30,
-  may01: utahcountycasebank.may01 - utahcountyrecovered.may01,
-  may02: utahcountycasebank.may02 - utahcountyrecovered.may02,
-  may03: utahcountycasebank.may03 - utahcountyrecovered.may03,
-  may04: utahcountycasebank.may04 - utahcountyrecovered.may04,
-  may05: utahcountycasebank.may05 - utahcountyrecovered.may05,
-  may06: utahcountycasebank.may06 - utahcountyrecovered.may06,
-  may07: utahcountycasebank.may07 - utahcountyrecovered.may07,
-  may08: utahcountycasebank.may08 - utahcountyrecovered.may08,
-  may09: utahcountycasebank.may09 - utahcountyrecovered.may09,
-  may10: utahcountycasebank.may10 - utahcountyrecovered.may10,
-  may11: utahcountycasebank.may11 - utahcountyrecovered.may11,
-  may12: utahcountycasebank.may12 - utahcountyrecovered.may12,
-  may13: utahcountycasebank.may13 - utahcountyrecovered.may13,
-  may14: utahcountycasebank.may14 - utahcountyrecovered.may14,
-  may15: utahcountycasebank.may15 - utahcountyrecovered.may15,
-  may16: utahcountycasebank.may16 - utahcountyrecovered.may16,
-  may17: utahcountycasebank.may17 - utahcountyrecovered.may17,
-  may18: utahcountycasebank.may18 - utahcountyrecovered.may18,
-  may19: utahcountycasebank.may19 - utahcountyrecovered.may19,
-  may20: utahcountycasebank.may20 - utahcountyrecovered.may20,
-  may21: utahcountycasebank.may21 - utahcountyrecovered.may21,
-  may22: utahcountycasebank.may22 - utahcountyrecovered.may22,
-  may23: utahcountycasebank.may23 - utahcountyrecovered.may23,
-  may24: utahcountycasebank.may24 - utahcountyrecovered.may24,
-  may25: utahcountycasebank.may25 - utahcountyrecovered.may25,
-  may26: utahcountycasebank.may26 - utahcountyrecovered.may26,
-  may27: utahcountycasebank.may27 - utahcountyrecovered.may27,
-  may28: utahcountycasebank.may28 - utahcountyrecovered.may28,
-  may29: utahcountycasebank.may29 - utahcountyrecovered.may29,
-  may30: utahcountycasebank.may30 - utahcountyrecovered.may30,
-};
 
           var twodaysago = uscases[todayDate - 3];
 var twodaysagoglobal = globalstuffs[todayDate - 3];
@@ -445,6 +336,9 @@ for (var i = 0; i<gcaserank.length -69; i++) {
   else if (i< 366) {
     dataLabelsBig.push("March " + (i -334))
   }
+  else if (i< 396) {
+    dataLabelsBig.push("April " + (i -365))
+  }
 gTotalAverageData.push(gTotalAverage);
 usTotalAverageData.push(usTotalAverage);
 utahTotalAverageData.push(utahTotalAverage);
@@ -490,6 +384,9 @@ for (var i = 0; i<gcaserank.length -76; i++) {
   }
   else if (i< 372) {
     dateLabels.push("March " + (i -340))
+  }
+  else if (i< 402) {
+    dateLabels.push("April " + (i -371))
   }
 }
 console.log(dateLabels)
