@@ -339,6 +339,9 @@ for (var i = 0; i<gcaserank.length -69; i++) {
   else if (i< 396) {
     dataLabelsBig.push("April " + (i -365))
   }
+  else if (i< 427) {
+    dataLabelsBig.push("May " + (i -395))
+  }
 gTotalAverageData.push(gTotalAverage);
 usTotalAverageData.push(usTotalAverage);
 utahTotalAverageData.push(utahTotalAverage);
@@ -387,6 +390,9 @@ for (var i = 0; i<gcaserank.length -76; i++) {
   }
   else if (i< 402) {
     dateLabels.push("April " + (i -371))
+  }
+  else if (i< 433) {
+    dateLabels.push("May " + (i -401))
   }
 }
 console.log(dateLabels)
