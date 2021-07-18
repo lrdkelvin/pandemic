@@ -1,23 +1,6 @@
 $(document).ready(function() {
  
 var dates = [];
-var globaldeathdates = [];
-var uscasedates = [];
-var usdeathdates = [];
-var utahcasedates = [];
-var utahdeathdates = [];
-var globalcasebank = {};
-var globaldeathbank = {};
-var uscasebank = {};
-var usdeathbank = {};
-var utahcasebank = {};
-var utahdeathbank = {};
-var grecovered = {};
-var gactivecases = {};
-var usrecovered = {};
-var usactivecases = {};
-var utahrecovered = {};
-var utahactivecases = {};
 var todayDate = globalstuffs.length;
 var gcaserank = [];
 var uscaserank = [];
@@ -342,6 +325,12 @@ for (var i = 0; i<gcaserank.length -69; i++) {
   else if (i< 427) {
     dataLabelsBig.push("May " + (i -395))
   }
+  else if (i< 457) {
+    dataLabelsBig.push("June  " + (i -426))
+  }
+  else if (i< 488) {
+    dataLabelsBig.push("July  " + (i -456))
+  }
 gTotalAverageData.push(gTotalAverage);
 usTotalAverageData.push(usTotalAverage);
 utahTotalAverageData.push(utahTotalAverage);
@@ -394,6 +383,13 @@ for (var i = 0; i<gcaserank.length -76; i++) {
   else if (i< 433) {
     dateLabels.push("May " + (i -401))
   }
+  else if (i< 463) {
+    dateLabels.push("June " + (i -432))
+  }
+  else if (i< 494) {
+    dateLabels.push("July " + (i -462))
+  }
+  
 }
 console.log(dateLabels)
 $("#date").html("Updated " + dataLabelsBig[dataLabelsBig.length -1])
